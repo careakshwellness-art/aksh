@@ -17,13 +17,11 @@ body{
 height:100vh;
 overflow:hidden;
 background:black;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,sans-serif;
 }
 
-.video{
+video{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
 object-fit:cover;
@@ -42,78 +40,43 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-text-align:center;
 color:white;
+text-align:center;
 }
 
 .logo{
 font-size:70px;
-font-weight:300;
 letter-spacing:22px;
-animation:fade 3s ease;
-}
-
-.message{
-margin-top:25px;
-font-size:18px;
-opacity:0.9;
-animation:fade 4s ease;
+font-weight:300;
 }
 
 button{
 width:230px;
-padding:16px;
+padding:15px;
 margin-top:15px;
-
 border-radius:50px;
-border:1px solid rgba(255,255,255,0.5);
-
-background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,.5);
+background:rgba(255,255,255,.15);
 color:white;
-
 font-size:16px;
-
-backdrop-filter:blur(10px);
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
 }
 
 </style>
-
 </head>
 
 <body>
 
-<video class="video" autoplay muted loop playsinline>
+<video autoplay muted loop playsinline>
 <source src="aksh-intro.mp4" type="video/mp4">
 </video>
 
-
 <div class="overlay"></div>
-
 
 <div class="content">
 
 <div class="logo">
 AKSH
 </div>
-
-<div class="message">
-A place beyond the ordinary.
-</div>
-
 
 <button>
 Enter AKSH
@@ -126,7 +89,6 @@ Skip to Website
 <button>
 Sound
 </button>
-
 
 </div>
 
