@@ -25,26 +25,94 @@ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
 body{
-display:flex;
-justify-content:center;
-align-items:center;
 position:relative;
 }
 
-.fade{
+.sky{
 position:fixed;
 inset:0;
-background:#000;
-animation:fadeIn 6s ease forwards;
+background:
+radial-gradient(circle at 50% 25%, rgba(255,245,210,.95) 0%, rgba(255,230,170,.45) 15%, transparent 35%),
+linear-gradient(to bottom,#09121d 0%,#16324d 30%,#4b79a1 65%,#8fc9f8 100%);
+animation:skyReveal 8s ease forwards;
 }
 
-@keyframes fadeIn{
+.light{
+position:absolute;
+top:-30%;
+left:50%;
+width:900px;
+height:900px;
+transform:translateX(-50%);
+background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%);
+filter:blur(40px);
+animation:pulse 6s ease-in-out infinite;
+}
+
+.cloud{
+position:absolute;
+background:rgba(255,255,255,.18);
+border-radius:100px;
+filter:blur(25px);
+}
+
+.c1{
+width:320px;
+height:90px;
+top:18%;
+left:-350px;
+animation:move1 35s linear infinite;
+}
+
+.c2{
+width:260px;
+height:80px;
+top:38%;
+left:-300px;
+animation:move2 45s linear infinite;
+}
+
+.c3{
+width:420px;
+height:110px;
+top:58%;
+left:-450px;
+animation:move3 55s linear infinite;
+}
+
+@keyframes skyReveal{
 0%{
-opacity:1;
+opacity:0;
+transform:scale(1.05);
 }
 100%{
-opacity:0;
+opacity:1;
+transform:scale(1);
 }
+}
+
+@keyframes pulse{
+0%,100%{
+opacity:.5;
+}
+50%{
+opacity:1;
+}
+}
+
+@keyframes move1{
+from{transform:translateX(0);}
+to{transform:translateX(calc(100vw + 700px));}
+}
+
+@keyframes move2{
+from{transform:translateX(0);}
+to{transform:translateX(calc(100vw + 650px));}
+}
+
+@keyframes move3{
+from{transform:translateX(0);}
+to{transform:translateX(calc(100vw + 800px));}
 }
 
 </style>
@@ -53,7 +121,17 @@ opacity:0;
 
 <body>
 
-<div class="fade"></div>
+<div class="sky">
+
+<div class="light"></div>
+
+<div class="cloud c1"></div>
+
+<div class="cloud c2"></div>
+
+<div class="cloud c3"></div>
+
+</div>
 
 </body>
 
