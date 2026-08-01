@@ -16,124 +16,117 @@ box-sizing:border-box;
 body{
 height:100vh;
 overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(180deg,#87CEEB 0%,#B8E6FF 40%,#FFF6E5 100%);
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+background:black;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
-.cloud{
-position:absolute;
-background:white;
-opacity:.6;
-border-radius:100px;
-filter:blur(2px);
-animation:float 45s linear infinite;
-}
-
-.c1{
-width:220px;
-height:70px;
-top:12%;
-left:-250px;
-}
-
-.c2{
-width:160px;
-height:55px;
-top:35%;
-left:-180px;
-animation-duration:60s;
-}
-
-.c3{
-width:280px;
-height:80px;
-top:65%;
-left:-300px;
-animation-duration:75s;
-}
-
-@keyframes float{
-from{
-transform:translateX(0);
-}
-to{
-transform:translateX(calc(100vw + 600px));
-}
+.video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .overlay{
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.18);
+background:rgba(0,0,0,0.35);
+}
+
+.content{
+position:absolute;
+inset:0;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-}
-
-.card{
 text-align:center;
-padding:30px;
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.25);
-border-radius:30px;
-width:90%;
-max-width:360px;
+color:white;
 }
 
-h1{
-font-size:60px;
+.logo{
+font-size:70px;
 font-weight:300;
-letter-spacing:18px;
-color:white;
-margin-bottom:12px;
+letter-spacing:22px;
+animation:fade 3s ease;
 }
 
-p{
-color:white;
-opacity:.95;
-margin-bottom:30px;
-line-height:1.5;
+.message{
+margin-top:25px;
+font-size:18px;
+opacity:0.9;
+animation:fade 4s ease;
 }
 
 button{
-width:100%;
+width:230px;
 padding:16px;
-margin-top:12px;
-border:none;
+margin-top:15px;
+
 border-radius:50px;
-background:rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,0.5);
+
+background:rgba(255,255,255,0.12);
 color:white;
+
 font-size:16px;
+
 backdrop-filter:blur(10px);
 }
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="cloud c1"></div>
-<div class="cloud c2"></div>
-<div class="cloud c3"></div>
+<video class="video" autoplay muted loop playsinline>
+<source src="aksh-intro.mp4" type="video/mp4">
+</video>
 
-<div class="overlay">
 
-<div class="card">
+<div class="overlay"></div>
 
-<h1>AKSH</h1>
 
-<p>A place beyond the ordinary.</p>
+<div class="content">
 
-<button>Enter AKSH</button>
-
-<button>Skip to Website</button>
-
-<button>Sound</button>
-
+<div class="logo">
+AKSH
 </div>
+
+<div class="message">
+A place beyond the ordinary.
+</div>
+
+
+<button>
+Enter AKSH
+</button>
+
+<button>
+Skip to Website
+</button>
+
+<button>
+Sound
+</button>
+
 
 </div>
 
