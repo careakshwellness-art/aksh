@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Emotion Library - AKSH</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#081b29,
+#173c3b,
+#263f32
+);
+
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.container{
+
+width:90%;
+
+max-width:650px;
+
+text-align:center;
+
+animation:fade 1.5s ease;
+
+}
+
+
+
+.logo{
+
+font-size:45px;
+
+letter-spacing:12px;
+
+margin-bottom:35px;
+
+}
+
+
+
+h1{
+
+font-size:32px;
+
+font-weight:400;
+
+margin-bottom:15px;
+
+}
+
+
+
+.subtitle{
+
+font-size:17px;
+
+line-height:1.7;
+
+opacity:.85;
+
+margin-bottom:30px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.1);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+padding:25px;
+
+margin:15px 0;
+
+cursor:pointer;
+
+}
+
+
+
+.card:hover{
+
+background:rgba(255,255,255,.18);
+
+}
+
+
+
+.icon{
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.title{
+
+font-size:21px;
+
+margin-bottom:8px;
+
+}
+
+
+
+.text{
+
+font-size:16px;
+
+line-height:1.6;
+
+opacity:.9;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<h1>
+How Are You Feeling?
+</h1>
+
+
+<div class="subtitle">
+
+Choose what feels closest to you.
+Your journey starts here.
+
+</div>
+
+
+
+<div class="card" onclick="openPage('anxious.html')">
+
+<div class="icon">
+😟
+</div>
+
+<div class="title">
+I Feel Anxious
+</div>
+
+<div class="text">
+
+A space to slow down and understand anxious feelings.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="openPage('overwhelmed.html')">
+
+<div class="icon">
+🌊
+</div>
+
+<div class="title">
+I Feel Overwhelmed
+</div>
+
+<div class="text">
+
+A place to pause when everything feels too much.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="openPage('talk.html')">
+
+<div class="icon">
+💬
+</div>
+
+<div class="title">
+I Need To Talk
+</div>
+
+<div class="text">
+
+Sometimes being heard is the first step.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="openPage('explore.html')">
+
+<div class="icon">
+✨
+</div>
+
+<div class="title">
+I Am Exploring
+</div>
+
+<div class="text">
+
+Understand yourself at your own pace.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function openPage(page){
+
+window.location.href=page;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
