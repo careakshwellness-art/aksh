@@ -25,25 +25,6 @@ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
 
-/* blurred background */
-
-.background-video{
-
-position:fixed;
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-filter:blur(35px) brightness(0.6);
-
-transform:scale(1.15);
-
-}
-
-
-/* main video */
-
 video{
 
 position:fixed;
@@ -58,15 +39,59 @@ height:100%;
 
 object-fit:contain;
 
+background:black;
+
 }
 
 
 
-/* start screen */
+.logo{
+
+position:fixed;
+
+top:45px;
+
+width:100%;
+
+text-align:center;
+
+color:white;
+
+font-size:42px;
+
+letter-spacing:12px;
+
+opacity:0;
+
+animation:showLogo 3s forwards;
+
+text-shadow:0 0 25px rgba(255,255,255,.8);
+
+}
+
+
+
+@keyframes showLogo{
+
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+
 
 .screen{
 
 position:fixed;
+
 inset:0;
 
 display:flex;
@@ -79,13 +104,12 @@ align-items:center;
 
 
 
-/* buttons */
 
 .controls{
 
 position:fixed;
 
-bottom:40px;
+bottom:45px;
 
 width:100%;
 
@@ -95,28 +119,57 @@ justify-content:center;
 
 flex-wrap:wrap;
 
+animation:buttons 1.5s forwards;
+
 }
+
+
+
+@keyframes buttons{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
 
 
 button{
 
 margin:8px;
 
-padding:14px 25px;
+padding:15px 28px;
 
-border-radius:40px;
+border-radius:50px;
 
-border:1px solid rgba(255,255,255,0.5);
+border:1px solid rgba(255,255,255,.4);
 
-background:rgba(0,0,0,0.35);
+background:rgba(0,0,0,.35);
 
 color:white;
 
 font-size:15px;
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(15px);
 
 }
+
+
+
+button:active{
+
+transform:scale(.95);
+
+}
+
 
 
 </style>
@@ -127,21 +180,17 @@ backdrop-filter:blur(10px);
 <body>
 
 
-
-<video class="background-video" autoplay muted loop>
-
-<source src="./aksh-intro.MP4" type="video/mp4">
-
-</video>
-
-
-
 <video id="introVideo" playsinline>
 
 <source src="./aksh-intro.MP4" type="video/mp4">
 
 </video>
 
+
+
+<div class="logo">
+AKSH
+</div>
 
 
 
@@ -179,21 +228,14 @@ backdrop-filter:blur(10px);
 
 
 
-
 <script>
 
 
-const video =
-document.getElementById("introVideo");
+const video=document.getElementById("introVideo");
 
+const startScreen=document.getElementById("startScreen");
 
-const startScreen =
-document.getElementById("startScreen");
-
-
-const controls =
-document.getElementById("controls");
-
+const controls=document.getElementById("controls");
 
 
 
@@ -211,13 +253,11 @@ video.play();
 
 
 
-
 function muteSound(){
 
 video.muted=true;
 
 }
-
 
 
 
@@ -231,7 +271,6 @@ enterAKSH();
 
 
 
-
 function enterAKSH(){
 
 window.location.href="home.html";
@@ -241,7 +280,6 @@ window.location.href="home.html";
 
 
 </script>
-
 
 
 </body>
