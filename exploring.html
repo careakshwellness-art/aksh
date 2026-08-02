@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH - Explore</title>
+<title>AKSH - Exploring</title>
 
 <style>
 
@@ -16,16 +16,17 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 body{
 
-height:100vh;
+min-height:100vh;
 
 background:
 linear-gradient(
 180deg,
-#122631,
-#294941,
-#46553c
+#12372a,
+#2d6a4f,
+#52b788
 );
 
 color:white;
@@ -41,11 +42,12 @@ align-items:center;
 }
 
 
+
 .container{
 
 width:90%;
 
-max-width:500px;
+max-width:600px;
 
 text-align:center;
 
@@ -65,33 +67,64 @@ margin-bottom:35px;
 }
 
 
+
 h1{
 
-font-size:28px;
+font-size:32px;
 
-font-weight:500;
+font-weight:400;
+
+line-height:1.4;
 
 margin-bottom:25px;
 
 }
 
 
+
 p{
 
 font-size:18px;
 
-line-height:1.6;
+line-height:1.8;
 
 opacity:.9;
-
-margin-bottom:35px;
 
 }
 
 
+
+.seed{
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+margin:35px auto;
+
+background:rgba(255,255,255,.15);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:55px;
+
+animation:grow 4s infinite;
+
+}
+
+
+
 button{
 
-padding:16px 30px;
+margin-top:30px;
+
+padding:16px 35px;
 
 border-radius:40px;
 
@@ -102,6 +135,30 @@ background:rgba(255,255,255,.12);
 color:white;
 
 font-size:16px;
+
+}
+
+
+
+@keyframes grow{
+
+0%{
+
+transform:scale(.9);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+100%{
+
+transform:scale(.9);
+
+}
 
 }
 
@@ -127,6 +184,7 @@ transform:translateY(0);
 
 }
 
+
 </style>
 
 </head>
@@ -144,17 +202,22 @@ AKSH
 
 
 <h1>
-Welcome. Take your time.
+Every journey begins with curiosity.
 </h1>
+
+
+<div class="seed">
+🌱
+</div>
 
 
 <p>
 
-You can explore what AKSH is about,
-understand the sessions,
-and begin whenever you feel ready.
+You don't need to have all the answers.
 
-There is no pressure.
+Explore AKSH at your own pace,
+understand yourself better,
+and discover what feels right for you.
 
 </p>
 
@@ -172,7 +235,7 @@ Explore Sessions
 
 function openSession(){
 
-window.location.href="appointment.html";
+window.location.href="sessions.html";
 
 }
 
