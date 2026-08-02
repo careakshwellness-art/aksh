@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH - Talk</title>
+<title>AKSH</title>
 
 <style>
 
@@ -23,9 +23,9 @@ height:100vh;
 background:
 linear-gradient(
 180deg,
-#10242b,
-#23443d,
-#304735
+#081b29,
+#173c3b,
+#263f32
 );
 
 color:white;
@@ -56,52 +56,50 @@ animation:fade 2s ease;
 }
 
 
-
 .logo{
 
-font-size:45px;
+font-size:48px;
 
-letter-spacing:12px;
+letter-spacing:15px;
 
-margin-bottom:35px;
-
-}
-
-
-
-h1{
-
-font-size:28px;
-
-margin-bottom:25px;
-
-font-weight:500;
+margin-bottom:30px;
 
 }
 
 
+.message{
 
-p{
+font-size:22px;
 
-font-size:18px;
+line-height:1.5;
 
-line-height:1.6;
+margin-bottom:45px;
 
 opacity:.9;
 
-margin-bottom:40px;
-
 }
 
+
+.question{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
 
 
 button{
 
-padding:16px 30px;
+width:100%;
+
+padding:18px;
+
+margin:12px 0;
 
 border-radius:40px;
 
-border:1px solid rgba(255,255,255,.4);
+border:1px solid rgba(255,255,255,.3);
 
 background:rgba(255,255,255,.12);
 
@@ -109,8 +107,9 @@ color:white;
 
 font-size:16px;
 
-}
+backdrop-filter:blur(12px);
 
+}
 
 
 @keyframes fade{
@@ -133,7 +132,6 @@ transform:translateY(0);
 
 }
 
-
 </style>
 
 </head>
@@ -150,26 +148,56 @@ AKSH
 </div>
 
 
-<h1>
-You don't have to carry everything alone.
-</h1>
+<div class="message">
+
+A calm space to pause,<br>
+reflect and reconnect.
+
+</div>
 
 
-<p>
+<div class="question">
 
-This is a space where you can pause,
-share what you are feeling,
-and be heard.
+What brings you here today?
 
-</p>
+</div>
+
 
 
 <button>
-Book a Session
+🌧️ I feel anxious
 </button>
 
 
+<button>
+🌊 I feel overwhelmed
+</button>
+
+
+<button onclick="openTalk()">
+💬 I need someone to talk to
+</button>
+
+
+<button>
+🌱 I'm just exploring
+</button>
+
+
+
 </div>
+
+
+
+<script>
+
+function openTalk(){
+
+window.location.href="talk.html";
+
+}
+
+</script>
 
 
 </body>
