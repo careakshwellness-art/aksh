@@ -33,25 +33,41 @@ object-fit:cover;
 }
 
 
-.overlay{
+.screen{
 position:fixed;
 inset:0;
 display:flex;
 justify-content:center;
-align-items:flex-end;
-padding-bottom:50px;
+align-items:center;
+}
+
+
+.controls{
+position:fixed;
+bottom:40px;
+width:100%;
+display:none;
+justify-content:center;
 }
 
 
 button{
-margin:10px;
+
+margin:8px;
 padding:14px 25px;
+
 border-radius:40px;
+
 border:1px solid rgba(255,255,255,.5);
+
 background:rgba(0,0,0,.35);
+
 color:white;
+
 font-size:15px;
+
 backdrop-filter:blur(10px);
+
 }
 
 
@@ -63,10 +79,7 @@ backdrop-filter:blur(10px);
 <body>
 
 
-<video 
-id="introVideo"
-autoplay
-playsinline>
+<video id="introVideo" playsinline>
 
 <source src="./aksh-intro.MP4" type="video/mp4">
 
@@ -74,9 +87,20 @@ playsinline>
 
 
 
-<div class="overlay">
+<div class="screen" id="startScreen">
 
-<button onclick="muteVideo()">
+<button onclick="startExperience()">
+✨ Begin Experience
+</button>
+
+</div>
+
+
+
+<div class="controls" id="controls">
+
+
+<button onclick="muteSound()">
 🔇 Sound Off
 </button>
 
@@ -98,26 +122,29 @@ playsinline>
 <script>
 
 
-const video =
-document.getElementById("introVideo");
+const video=document.getElementById("introVideo");
+
+const startScreen=document.getElementById("startScreen");
+
+const controls=document.getElementById("controls");
 
 
-// try starting with sound
+
+function startExperience(){
+
+startScreen.style.display="none";
+
+controls.style.display="flex";
 
 video.muted=false;
 
-video.play().catch(()=>{
-
-// browser may block sound autoplay
-
-video.muted=true;
 video.play();
 
-});
+}
 
 
 
-function muteVideo(){
+function muteSound(){
 
 video.muted=true;
 
