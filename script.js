@@ -1,28 +1,46 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-const hero=document.querySelector(".hero-content");
+const hero = document.querySelector(".hero-content");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-const y=window.scrollY;
+const scroll = window.scrollY;
 
-hero.style.transform=`translateY(${y*0.2}px)`;
+hero.style.transform = `translateY(${scroll * 0.18}px)`;
 
-hero.style.opacity=1-(y/600);
-
-});
-
-const button=document.querySelector(".hero-button");
-
-button.addEventListener("mouseenter",()=>{
-
-button.style.boxShadow="0 0 50px rgba(212,175,55,.7)";
+hero.style.opacity = 1 - (scroll / 700);
 
 });
 
-button.addEventListener("mouseleave",()=>{
+const cards = document.querySelectorAll(".emotion-grid a");
 
-button.style.boxShadow="0 15px 40px rgba(212,175,55,.35)";
+cards.forEach(card => {
+
+card.addEventListener("mouseenter", () => {
+
+card.style.transform = "translateY(-10px) scale(1.03)";
+
+});
+
+card.addEventListener("mouseleave", () => {
+
+card.style.transform = "translateY(0px) scale(1)";
+
+});
+
+});
+
+const button = document.querySelector(".hero-button");
+
+button.addEventListener("mouseenter", () => {
+
+button.style.boxShadow = "0 0 60px rgba(212,175,55,.7)";
+
+});
+
+button.addEventListener("mouseleave", () => {
+
+button.style.boxShadow = "0 20px 50px rgba(212,175,55,.35)";
 
 });
 
