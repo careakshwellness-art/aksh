@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH Appointment</title>
+<title>AKSH - Talk</title>
 
 <style>
 
@@ -23,9 +23,9 @@ height:100vh;
 background:
 linear-gradient(
 180deg,
-#10252d,
-#23483f,
-#304b37
+#10242b,
+#23443d,
+#304735
 );
 
 color:white;
@@ -38,6 +38,8 @@ justify-content:center;
 
 align-items:center;
 
+overflow:hidden;
+
 }
 
 
@@ -49,9 +51,10 @@ max-width:500px;
 
 text-align:center;
 
-animation:fade 1.5s ease;
+animation:fade 2s ease;
 
 }
+
 
 
 .logo{
@@ -60,20 +63,22 @@ font-size:45px;
 
 letter-spacing:12px;
 
-margin-bottom:30px;
+margin-bottom:35px;
 
 }
+
 
 
 h1{
 
 font-size:28px;
 
-font-weight:500;
-
 margin-bottom:25px;
 
+font-weight:500;
+
 }
+
 
 
 p{
@@ -84,58 +89,28 @@ line-height:1.6;
 
 opacity:.9;
 
-margin-bottom:35px;
+margin-bottom:40px;
 
 }
 
-
-input,textarea{
-
-width:100%;
-
-margin:10px 0;
-
-padding:16px;
-
-border-radius:25px;
-
-border:none;
-
-background:rgba(255,255,255,.15);
-
-color:white;
-
-font-size:15px;
-
-}
-
-
-textarea{
-
-height:100px;
-
-resize:none;
-
-}
 
 
 button{
 
-margin-top:20px;
-
-padding:16px 35px;
+padding:16px 30px;
 
 border-radius:40px;
 
 border:1px solid rgba(255,255,255,.4);
 
-background:rgba(255,255,255,.15);
+background:rgba(255,255,255,.12);
 
 color:white;
 
 font-size:16px;
 
 }
+
 
 
 @keyframes fade{
@@ -176,33 +151,37 @@ AKSH
 
 
 <h1>
-Take your first step.
+You don't have to carry everything alone.
 </h1>
 
 
 <p>
 
-Choose a time that feels right.
-Share what you would like support with.
+This is a space where you can pause,
+share what you are feeling,
+and be heard.
 
 </p>
 
 
-<input placeholder="Your name">
-
-
-<input placeholder="Your email">
-
-
-<textarea placeholder="What would you like to talk about?"></textarea>
-
-
-<button>
-Request Session
+<button onclick="openAppointment()">
+Book a Session
 </button>
 
 
 </div>
+
+
+
+<script>
+
+function openAppointment(){
+
+window.location.href="appointment.html";
+
+}
+
+</script>
 
 
 </body>
