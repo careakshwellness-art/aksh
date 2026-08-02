@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKSH</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#0b1f2a,
+#163d3a,
+#203d35
+);
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+
+.container{
+
+text-align:center;
+
+width:90%;
+
+max-width:500px;
+
+animation:fade 2s ease;
+
+}
+
+
+
+.logo{
+
+font-size:48px;
+
+letter-spacing:15px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.message{
+
+font-size:22px;
+
+line-height:1.5;
+
+opacity:.9;
+
+margin-bottom:45px;
+
+}
+
+
+
+.question{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.option{
+
+display:block;
+
+width:100%;
+
+padding:18px;
+
+margin:14px 0;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.25);
+
+color:white;
+
+font-size:16px;
+
+backdrop-filter:blur(10px);
+
+}
+
+
+
+.option:hover{
+
+background:rgba(255,255,255,.2);
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<div class="message">
+
+A calm space to pause,
+reflect and reconnect.
+
+</div>
+
+
+
+<div class="question">
+
+What brings you here today?
+
+</div>
+
+
+
+<button class="option">
+🌧️ I feel anxious
+</button>
+
+
+<button class="option">
+🌊 I feel overwhelmed
+</button>
+
+
+<button class="option">
+💬 I need someone to talk to
+</button>
+
+
+<button class="option">
+🌱 I'm just exploring
+</button>
+
+
+
+</div>
+
+
+</body>
+
+</html>
