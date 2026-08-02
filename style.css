@@ -1200,3 +1200,82 @@ max-width:650px;
 opacity:.9;
 
 }
+/* ===========================
+AKSH HERO SPACING POLISH
+=========================== */
+
+
+.hero-content{
+
+padding-top:20px;
+
+}
+
+
+
+.hero-logo{
+
+width:260px;
+
+max-width:75%;
+
+margin-bottom:45px;
+
+}
+
+
+
+.hero h2{
+
+font-size:44px;
+
+line-height:1.25;
+
+margin-bottom:28px;
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+max-width:680px;
+
+margin-bottom:55px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.hero-logo{
+
+width:180px;
+
+margin-bottom:35px;
+
+}
+
+
+
+.hero h2{
+
+font-size:32px;
+
+}
+
+
+
+.hero p{
+
+font-size:17px;
+
+margin-bottom:40px;
+
+}
+
+}
