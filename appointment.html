@@ -41,29 +41,6 @@ align-items:center;
 }
 
 
-
-.menu{
-
-position:fixed;
-
-top:25px;
-
-right:25px;
-
-padding:12px 20px;
-
-border-radius:30px;
-
-background:rgba(255,255,255,.12);
-
-border:1px solid rgba(255,255,255,.3);
-
-color:white;
-
-}
-
-
-
 .container{
 
 width:90%;
@@ -72,10 +49,7 @@ max-width:500px;
 
 text-align:center;
 
-animation:fade 1.5s ease;
-
 }
-
 
 
 .logo{
@@ -87,33 +61,6 @@ letter-spacing:12px;
 margin-bottom:30px;
 
 }
-
-
-
-h1{
-
-font-size:28px;
-
-font-weight:500;
-
-margin-bottom:25px;
-
-}
-
-
-
-p{
-
-font-size:18px;
-
-line-height:1.6;
-
-opacity:.9;
-
-margin-bottom:35px;
-
-}
-
 
 
 input,textarea{
@@ -137,7 +84,6 @@ font-size:15px;
 }
 
 
-
 textarea{
 
 height:100px;
@@ -145,7 +91,6 @@ height:100px;
 resize:none;
 
 }
-
 
 
 button{
@@ -166,41 +111,12 @@ font-size:16px;
 
 }
 
-
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
 </style>
 
 </head>
 
 
 <body>
-
-
-<button class="menu" onclick="openMenu()">
-☰ Menu
-</button>
-
 
 
 <div class="container">
@@ -212,28 +128,20 @@ AKSH
 
 
 <h1>
-Take your first step.
+Request a Session
 </h1>
 
 
-<p>
-
-Choose a time that feels right.
-Share what you would like support with.
-
-</p>
+<input id="name" placeholder="Your name">
 
 
-<input placeholder="Your name">
+<input id="email" placeholder="Your email">
 
 
-<input placeholder="Your email">
+<textarea id="message" placeholder="What would you like to talk about?"></textarea>
 
 
-<textarea placeholder="What would you like to talk about?"></textarea>
-
-
-<button>
+<button onclick="sendRequest()">
 Request Session
 </button>
 
@@ -244,11 +152,43 @@ Request Session
 
 <script>
 
-function openMenu(){
 
-window.location.href="menu.html";
+function sendRequest(){
+
+
+let name =
+document.getElementById("name").value;
+
+
+let email =
+document.getElementById("email").value;
+
+
+let message =
+document.getElementById("message").value;
+
+
+
+let subject =
+"AKSH Session Request";
+
+
+let body =
+"Name: "+name+
+"\nEmail: "+email+
+"\nMessage: "+message;
+
+
+
+window.location.href =
+"mailto:?subject="+
+encodeURIComponent(subject)+
+"&body="+
+encodeURIComponent(body);
+
 
 }
+
 
 </script>
 
