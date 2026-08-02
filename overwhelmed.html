@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKSH - Overwhelmed</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#102631,
+#294941,
+#46553c
+);
+
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.container{
+
+width:90%;
+
+max-width:500px;
+
+text-align:center;
+
+animation:fade 2s ease;
+
+}
+
+
+.logo{
+
+font-size:45px;
+
+letter-spacing:12px;
+
+margin-bottom:35px;
+
+}
+
+
+h1{
+
+font-size:28px;
+
+font-weight:500;
+
+margin-bottom:25px;
+
+}
+
+
+p{
+
+font-size:18px;
+
+line-height:1.6;
+
+opacity:.9;
+
+margin-bottom:35px;
+
+}
+
+
+button{
+
+padding:16px 30px;
+
+border-radius:40px;
+
+border:1px solid rgba(255,255,255,.4);
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<h1>
+You have been carrying a lot.
+</h1>
+
+
+<p>
+
+When everything feels too much,
+you deserve a moment to slow down,
+breathe, and be heard.
+
+You don't have to solve everything at once.
+
+</p>
+
+
+<button onclick="openSession()">
+Talk with someone
+</button>
+
+
+</div>
+
+
+
+<script>
+
+function openSession(){
+
+window.location.href="appointment.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
