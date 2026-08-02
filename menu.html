@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKSH Menu</title>
+
+<style>
+
+body{
+
+height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#081b29,
+#173c3b,
+#263f32
+);
+
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.container{
+
+text-align:center;
+
+width:90%;
+
+max-width:400px;
+
+}
+
+
+.logo{
+
+font-size:50px;
+
+letter-spacing:15px;
+
+margin-bottom:40px;
+
+}
+
+
+button{
+
+width:100%;
+
+padding:17px;
+
+margin:10px 0;
+
+border-radius:40px;
+
+border:1px solid rgba(255,255,255,.3);
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<button onclick="go('home.html')">
+Home
+</button>
+
+
+<button onclick="go('about.html')">
+About AKSH
+</button>
+
+
+<button onclick="go('vision.html')">
+Vision
+</button>
+
+
+<button onclick="go('sessions.html')">
+Sessions
+</button>
+
+
+<button onclick="go('appointment.html')">
+Book Session
+</button>
+
+
+
+</div>
+
+
+<script>
+
+function go(page){
+
+window.location.href=page;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
