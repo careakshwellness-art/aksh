@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AKSH</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -26,21 +29,41 @@ height:100%;
 object-fit:cover;
 display:block;
 }
+
 </style>
 
 </head>
 
+
 <body>
 
-<video 
-autoplay 
-muted 
-playsinline
-loop>
 
-<source src="aksh-intro.MP4" type="video/mp4">
+<video 
+id="introVideo"
+autoplay
+muted
+playsinline>
+
+<source src="./aksh-intro.MP4" type="video/mp4">
+
+Your browser does not support video.
 
 </video>
 
+
+<script>
+
+const video = document.getElementById("introVideo");
+
+video.play().catch(() => {
+
+console.log("Autoplay waiting");
+
+});
+
+</script>
+
+
 </body>
+
 </html>
