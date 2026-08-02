@@ -25,39 +25,83 @@ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
 
-video{
+/* blurred background */
+
+.background-video{
+
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
-object-fit:contain;
-background:black;
+
+object-fit:cover;
+
+filter:blur(35px) brightness(0.6);
+
+transform:scale(1.15);
+
 }
 
+
+/* main video */
+
+video{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:100%;
+height:100%;
+
+object-fit:contain;
+
+}
+
+
+
+/* start screen */
 
 .screen{
+
 position:fixed;
 inset:0;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 }
 
 
+
+/* buttons */
+
 .controls{
+
 position:fixed;
+
 bottom:40px;
+
 width:100%;
+
 display:none;
+
 justify-content:center;
+
 flex-wrap:wrap;
+
 }
 
 
 button{
 
 margin:8px;
+
 padding:14px 25px;
 
 border-radius:40px;
@@ -83,11 +127,21 @@ backdrop-filter:blur(10px);
 <body>
 
 
+
+<video class="background-video" autoplay muted loop>
+
+<source src="./aksh-intro.MP4" type="video/mp4">
+
+</video>
+
+
+
 <video id="introVideo" playsinline>
 
 <source src="./aksh-intro.MP4" type="video/mp4">
 
 </video>
+
 
 
 
@@ -101,7 +155,9 @@ backdrop-filter:blur(10px);
 
 
 
+
 <div class="controls" id="controls">
+
 
 <button onclick="muteSound()">
 🔇 Sound Off
@@ -122,17 +178,22 @@ backdrop-filter:blur(10px);
 
 
 
+
+
 <script>
 
 
 const video =
 document.getElementById("introVideo");
 
+
 const startScreen =
 document.getElementById("startScreen");
 
+
 const controls =
 document.getElementById("controls");
+
 
 
 
@@ -150,11 +211,13 @@ video.play();
 
 
 
+
 function muteSound(){
 
 video.muted=true;
 
 }
+
 
 
 
@@ -168,6 +231,7 @@ enterAKSH();
 
 
 
+
 function enterAKSH(){
 
 window.location.href="home.html";
@@ -177,6 +241,7 @@ window.location.href="home.html";
 
 
 </script>
+
 
 
 </body>
