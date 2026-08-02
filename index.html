@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AKSH</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -21,118 +17,98 @@ width:100%;
 height:100%;
 overflow:hidden;
 background:#000;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
-body{
-position:relative;
+canvas{
+display:block;
+width:100%;
+height:100%;
 }
-
-.sky{
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 50% 25%, rgba(255,245,210,.95) 0%, rgba(255,230,170,.45) 15%, transparent 35%),
-linear-gradient(to bottom,#09121d 0%,#16324d 30%,#4b79a1 65%,#8fc9f8 100%);
-animation:skyReveal 8s ease forwards;
-}
-
-.light{
-position:absolute;
-top:-30%;
-left:50%;
-width:900px;
-height:900px;
-transform:translateX(-50%);
-background:radial-gradient(circle,rgba(255,255,255,.35),transparent 70%);
-filter:blur(40px);
-animation:pulse 6s ease-in-out infinite;
-}
-
-.cloud{
-position:absolute;
-background:rgba(255,255,255,.18);
-border-radius:100px;
-filter:blur(25px);
-}
-
-.c1{
-width:320px;
-height:90px;
-top:18%;
-left:-350px;
-animation:move1 35s linear infinite;
-}
-
-.c2{
-width:260px;
-height:80px;
-top:38%;
-left:-300px;
-animation:move2 45s linear infinite;
-}
-
-.c3{
-width:420px;
-height:110px;
-top:58%;
-left:-450px;
-animation:move3 55s linear infinite;
-}
-
-@keyframes skyReveal{
-0%{
-opacity:0;
-transform:scale(1.05);
-}
-100%{
-opacity:1;
-transform:scale(1);
-}
-}
-
-@keyframes pulse{
-0%,100%{
-opacity:.5;
-}
-50%{
-opacity:1;
-}
-}
-
-@keyframes move1{
-from{transform:translateX(0);}
-to{transform:translateX(calc(100vw + 700px));}
-}
-
-@keyframes move2{
-from{transform:translateX(0);}
-to{transform:translateX(calc(100vw + 650px));}
-}
-
-@keyframes move3{
-from{transform:translateX(0);}
-to{transform:translateX(calc(100vw + 800px));}
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="sky">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.168.0/build/three.module.js"
+  }
+}
+</script>
 
-<div class="light"></div>
+<script type="module">
 
-<div class="cloud c1"></div>
+import * as THREE from "three";
 
-<div class="cloud c2"></div>
+const scene = new THREE.Scene();
 
-<div class="cloud c3"></div>
+scene.background = new THREE.Color(0x000000);
 
-</div>
+const camera = new THREE.PerspectiveCamera(
+60,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+camera.position.z=5;
+
+const renderer=new THREE.WebGLRenderer({
+antialias:true
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+renderer.setPixelRatio(window.devicePixelRatio);
+
+document.body.appendChild(renderer.domElement);
+
+const light=new THREE.DirectionalLight(0xffffff,2);
+
+light.position.set(5,5,5);
+
+scene.add(light);
+
+const ambient=new THREE.AmbientLight(0xffffff,1);
+
+scene.add(ambient);
+
+const geometry=new THREE.SphereGeometry(1,64,64);
+
+const material=new THREE.MeshStandardMaterial({
+color:0xffffff,
+emissive:0xffd27a,
+emissiveIntensity:.4
+});
+
+const sun=new THREE.Mesh(geometry,material);
+
+scene.add(sun);
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+sun.rotation.y+=0.002;
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+window.addEventListener("resize",()=>{
+
+camera.aspect=window.innerWidth/window.innerHeight;
+
+camera.updateProjectionMatrix();
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+});
+
+</script>
 
 </body>
-
 </html>
