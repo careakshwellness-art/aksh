@@ -23,14 +23,14 @@ height:100vh;
 background:
 linear-gradient(
 180deg,
-#0b1f2a,
-#163d3a,
-#203d35
+#081b29,
+#173c3b,
+#263f32
 );
 
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-
 color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 
 display:flex;
 
@@ -45,16 +45,15 @@ overflow:hidden;
 
 .container{
 
-text-align:center;
-
 width:90%;
 
 max-width:500px;
 
+text-align:center;
+
 animation:fade 2s ease;
 
 }
-
 
 
 .logo{
@@ -63,10 +62,9 @@ font-size:48px;
 
 letter-spacing:15px;
 
-margin-bottom:25px;
+margin-bottom:30px;
 
 }
-
 
 
 .message{
@@ -75,12 +73,11 @@ font-size:22px;
 
 line-height:1.5;
 
-opacity:.9;
-
 margin-bottom:45px;
 
-}
+opacity:.9;
 
+}
 
 
 .question{
@@ -92,36 +89,25 @@ margin-bottom:25px;
 }
 
 
-
-.option{
-
-display:block;
+button{
 
 width:100%;
 
 padding:18px;
 
-margin:14px 0;
+margin:12px 0;
 
 border-radius:40px;
 
-background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.3);
 
-border:1px solid rgba(255,255,255,.25);
+background:rgba(255,255,255,.12);
 
 color:white;
 
 font-size:16px;
 
-backdrop-filter:blur(10px);
-
-}
-
-
-
-.option:hover{
-
-background:rgba(255,255,255,.2);
+backdrop-filter:blur(12px);
 
 }
 
@@ -147,7 +133,6 @@ transform:translateY(0);
 
 }
 
-
 </style>
 
 </head>
@@ -166,11 +151,10 @@ AKSH
 
 <div class="message">
 
-A calm space to pause,
+A calm space to pause,<br>
 reflect and reconnect.
 
 </div>
-
 
 
 <div class="question">
@@ -180,26 +164,24 @@ What brings you here today?
 </div>
 
 
-
-<button class="option">
+<button>
 🌧️ I feel anxious
 </button>
 
 
-<button class="option">
+<button>
 🌊 I feel overwhelmed
 </button>
 
 
-<button class="option">
+<button>
 💬 I need someone to talk to
 </button>
 
 
-<button class="option">
+<button>
 🌱 I'm just exploring
 </button>
-
 
 
 </div>
