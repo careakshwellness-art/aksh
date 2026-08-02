@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH - Anxiety</title>
+<title>AKSH</title>
 
 <style>
 
@@ -23,9 +23,9 @@ height:100vh;
 background:
 linear-gradient(
 180deg,
-#172b35,
-#294b42,
-#40543b
+#081b29,
+#173c3b,
+#263f32
 );
 
 color:white;
@@ -38,7 +38,10 @@ justify-content:center;
 
 align-items:center;
 
+overflow:hidden;
+
 }
+
 
 .container{
 
@@ -52,51 +55,59 @@ animation:fade 2s ease;
 
 }
 
+
 .logo{
 
-font-size:45px;
+font-size:48px;
 
-letter-spacing:12px;
+letter-spacing:15px;
 
-margin-bottom:35px;
+margin-bottom:30px;
 
 }
 
-h1{
 
-font-size:28px;
+.message{
 
-font-weight:500;
+font-size:22px;
+
+line-height:1.5;
+
+margin-bottom:45px;
+
+opacity:.9;
+
+}
+
+
+.question{
+
+font-size:18px;
 
 margin-bottom:25px;
 
 }
 
-p{
-
-font-size:18px;
-
-line-height:1.6;
-
-opacity:.9;
-
-margin-bottom:35px;
-
-}
 
 button{
 
-padding:16px 30px;
+width:100%;
+
+padding:18px;
+
+margin:12px 0;
 
 border-radius:40px;
 
-border:1px solid rgba(255,255,255,.4);
+border:1px solid rgba(255,255,255,.3);
 
 background:rgba(255,255,255,.12);
 
 color:white;
 
 font-size:16px;
+
+backdrop-filter:blur(12px);
 
 }
 
@@ -137,35 +148,58 @@ AKSH
 </div>
 
 
-<h1>
-It's okay to feel this way.
-</h1>
+<div class="message">
+
+A calm space to pause,<br>
+reflect and reconnect.
+
+</div>
 
 
-<p>
+<div class="question">
 
-Sometimes the mind feels restless,
-thoughts become heavy,
-and finding a calm moment feels difficult.
+What brings you here today?
 
-You don't have to face it alone.
-
-</p>
+</div>
 
 
-<button onclick="openSession()">
-Talk with someone
+
+<button onclick="openAnxious()">
+🌧️ I feel anxious
+</button>
+
+
+<button>
+🌊 I feel overwhelmed
+</button>
+
+
+<button onclick="openTalk()">
+💬 I need someone to talk to
+</button>
+
+
+<button>
+🌱 I'm just exploring
 </button>
 
 
 </div>
 
 
+
 <script>
 
-function openSession(){
+function openAnxious(){
 
-window.location.href="appointment.html";
+window.location.href="anxious.html";
+
+}
+
+
+function openTalk(){
+
+window.location.href="talk.html";
 
 }
 
