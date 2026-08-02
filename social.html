@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKSH Social</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#081b29,
+#173c3b,
+#263f32
+);
+
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.container{
+
+width:90%;
+
+max-width:600px;
+
+text-align:center;
+
+animation:fade 1.5s ease;
+
+}
+
+
+
+.logo{
+
+font-size:50px;
+
+letter-spacing:15px;
+
+margin-bottom:35px;
+
+}
+
+
+
+h1{
+
+font-size:34px;
+
+font-weight:400;
+
+margin-bottom:15px;
+
+}
+
+
+
+p{
+
+font-size:17px;
+
+line-height:1.7;
+
+opacity:.85;
+
+margin-bottom:30px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.1);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+padding:25px;
+
+margin:15px 0;
+
+}
+
+
+
+button{
+
+width:100%;
+
+padding:16px;
+
+border-radius:40px;
+
+border:1px solid rgba(255,255,255,.3);
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+
+.icon{
+
+font-size:35px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.title{
+
+font-size:20px;
+
+margin-bottom:8px;
+
+}
+
+
+
+.text{
+
+opacity:.85;
+
+line-height:1.6;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<h1>
+Connect With AKSH
+</h1>
+
+
+<p>
+
+Follow the journey.
+Stay connected with the AKSH vision.
+
+</p>
+
+
+
+<div class="card">
+
+<div class="icon">
+📸
+</div>
+
+<div class="title">
+Instagram
+</div>
+
+<div class="text">
+Stories, updates, and the AKSH journey.
+</div>
+
+<br>
+
+<button>
+Open Instagram
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+▶️
+</div>
+
+<div class="title">
+YouTube
+</div>
+
+<div class="text">
+Videos, conversations, and future experiences.
+</div>
+
+<br>
+
+<button>
+Open YouTube
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+💬
+</div>
+
+<div class="title">
+WhatsApp
+</div>
+
+<div class="text">
+Connect directly with AKSH.
+</div>
+
+<br>
+
+<button>
+Open WhatsApp
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+🌍
+</div>
+
+<div class="title">
+Community
+</div>
+
+<div class="text">
+Be part of the AKSH ecosystem.
+</div>
+
+<br>
+
+<button onclick="goCommunity()">
+Visit Community
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function goCommunity(){
+
+window.location.href="community.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
