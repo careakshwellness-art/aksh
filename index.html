@@ -45,49 +45,6 @@ background:black;
 
 
 
-.logo{
-
-position:fixed;
-
-top:45px;
-
-width:100%;
-
-text-align:center;
-
-color:white;
-
-font-size:42px;
-
-letter-spacing:12px;
-
-opacity:0;
-
-animation:showLogo 3s forwards;
-
-text-shadow:0 0 25px rgba(255,255,255,.8);
-
-}
-
-
-
-@keyframes showLogo{
-
-from{
-opacity:0;
-transform:translateY(-20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-
-
-
 .screen{
 
 position:fixed;
@@ -101,7 +58,6 @@ justify-content:center;
 align-items:center;
 
 }
-
 
 
 
@@ -119,26 +75,7 @@ justify-content:center;
 
 flex-wrap:wrap;
 
-animation:buttons 1.5s forwards;
-
 }
-
-
-
-@keyframes buttons{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
 
 
 
@@ -163,14 +100,23 @@ backdrop-filter:blur(15px);
 }
 
 
+.logo{
 
-button:active{
+position:fixed;
 
-transform:scale(.95);
+top:45px;
+
+width:100%;
+
+text-align:center;
+
+color:white;
+
+font-size:42px;
+
+letter-spacing:12px;
 
 }
-
-
 
 </style>
 
@@ -204,7 +150,6 @@ AKSH
 
 
 
-
 <div class="controls" id="controls">
 
 
@@ -224,7 +169,6 @@ AKSH
 
 
 </div>
-
 
 
 
@@ -263,8 +207,6 @@ video.muted=true;
 
 function skipIntro(){
 
-video.pause();
-
 enterAKSH();
 
 }
@@ -276,7 +218,6 @@ function enterAKSH(){
 window.location.href="home.html";
 
 }
-
 
 
 </script>
