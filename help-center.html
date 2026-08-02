@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Help Center - AKSH</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#081b29,
+#173c3b,
+#263f32
+);
+
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.container{
+
+width:90%;
+
+max-width:650px;
+
+text-align:center;
+
+animation:fade 1.5s ease;
+
+}
+
+
+
+.logo{
+
+font-size:45px;
+
+letter-spacing:12px;
+
+margin-bottom:35px;
+
+}
+
+
+
+h1{
+
+font-size:32px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+}
+
+
+
+.subtitle{
+
+font-size:17px;
+
+line-height:1.7;
+
+opacity:.85;
+
+margin-bottom:30px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.1);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+padding:25px;
+
+margin:15px 0;
+
+}
+
+
+
+.icon{
+
+font-size:35px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.title{
+
+font-size:20px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.text{
+
+font-size:16px;
+
+line-height:1.6;
+
+opacity:.9;
+
+}
+
+
+
+button{
+
+margin-top:25px;
+
+padding:16px 35px;
+
+border-radius:40px;
+
+border:1px solid rgba(255,255,255,.4);
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<h1>
+Help Center
+</h1>
+
+
+<div class="subtitle">
+
+Need guidance?
+Find answers and support for your AKSH journey.
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+❓
+</div>
+
+<div class="title">
+Common Questions
+</div>
+
+<div class="text">
+
+Explore answers about sessions,
+experience, and how AKSH works.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+💬
+</div>
+
+<div class="title">
+Contact Support
+</div>
+
+<div class="text">
+
+Reach out to the AKSH team whenever you need assistance.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+🌿
+</div>
+
+<div class="title">
+Need A Session?
+</div>
+
+<div class="text">
+
+If you are ready, begin your journey with an AKSH session.
+
+</div>
+
+</div>
+
+
+
+<button onclick="goContact()">
+
+Contact AKSH
+
+</button>
+
+
+</div>
+
+
+
+<script>
+
+function goContact(){
+
+window.location.href="contact.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
