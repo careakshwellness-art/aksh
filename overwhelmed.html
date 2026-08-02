@@ -18,14 +18,14 @@ box-sizing:border-box;
 
 body{
 
-height:100vh;
+min-height:100vh;
 
 background:
 linear-gradient(
 180deg,
-#102631,
-#294941,
-#46553c
+#16222a,
+#304352,
+#556270
 );
 
 color:white;
@@ -38,6 +38,8 @@ justify-content:center;
 
 align-items:center;
 
+overflow:hidden;
+
 }
 
 
@@ -45,7 +47,7 @@ align-items:center;
 
 width:90%;
 
-max-width:500px;
+max-width:600px;
 
 text-align:center;
 
@@ -67,9 +69,11 @@ margin-bottom:35px;
 
 h1{
 
-font-size:28px;
+font-size:32px;
 
-font-weight:500;
+font-weight:400;
+
+line-height:1.4;
 
 margin-bottom:25px;
 
@@ -80,18 +84,36 @@ p{
 
 font-size:18px;
 
-line-height:1.6;
+line-height:1.8;
 
 opacity:.9;
-
-margin-bottom:35px;
 
 }
 
 
+.wave{
+
+width:220px;
+
+height:80px;
+
+margin:35px auto;
+
+border-radius:50%;
+
+border:2px solid rgba(255,255,255,.4);
+
+animation:wave 3s infinite;
+
+}
+
+
+
 button{
 
-padding:16px 30px;
+margin-top:30px;
+
+padding:16px 35px;
 
 border-radius:40px;
 
@@ -104,6 +126,37 @@ color:white;
 font-size:16px;
 
 }
+
+
+
+@keyframes wave{
+
+0%{
+
+transform:scale(.8);
+
+opacity:.4;
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(.8);
+
+opacity:.4;
+
+}
+
+}
+
 
 
 @keyframes fade{
@@ -126,6 +179,7 @@ transform:translateY(0);
 
 }
 
+
 </style>
 
 </head>
@@ -143,23 +197,27 @@ AKSH
 
 
 <h1>
-You have been carrying a lot.
+You don't have to carry everything alone.
 </h1>
+
+
+<div class="wave"></div>
 
 
 <p>
 
 When everything feels too much,
-you deserve a moment to slow down,
-breathe, and be heard.
+take one moment at a time.
 
-You don't have to solve everything at once.
+AKSH gives you a space to slow down,
+organize your thoughts,
+and find clarity.
 
 </p>
 
 
 <button onclick="openSession()">
-Talk with someone
+Find Support
 </button>
 
 
