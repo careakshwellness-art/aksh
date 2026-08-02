@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>After Session - AKSH</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#102a43,
+#1f4e5f,
+#386641
+);
+
+color:white;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.container{
+
+width:90%;
+
+max-width:600px;
+
+text-align:center;
+
+animation:fade 2s ease;
+
+}
+
+
+
+.logo{
+
+font-size:45px;
+
+letter-spacing:12px;
+
+margin-bottom:35px;
+
+}
+
+
+
+h1{
+
+font-size:32px;
+
+font-weight:400;
+
+margin-bottom:30px;
+
+}
+
+
+
+.card{
+
+background:rgba(255,255,255,.1);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:25px;
+
+padding:22px;
+
+margin:15px 0;
+
+}
+
+
+
+.icon{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.title{
+
+font-size:20px;
+
+margin-bottom:8px;
+
+}
+
+
+
+.text{
+
+font-size:16px;
+
+line-height:1.6;
+
+opacity:.9;
+
+}
+
+
+
+button{
+
+margin-top:25px;
+
+padding:16px 35px;
+
+border-radius:40px;
+
+border:1px solid rgba(255,255,255,.4);
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+AKSH
+</div>
+
+
+<h1>
+After Your Session
+</h1>
+
+
+
+<div class="card">
+
+<div class="icon">
+🌿
+</div>
+
+<div class="title">
+Take A Moment
+</div>
+
+<div class="text">
+Give yourself time to process what you experienced.
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+💭
+</div>
+
+<div class="title">
+Reflect
+</div>
+
+<div class="text">
+Notice what you learned about yourself and what matters to you.
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">
+🌅
+</div>
+
+<div class="title">
+Continue Forward
+</div>
+
+<div class="text">
+Carry the awareness and clarity into your everyday life.
+</div>
+
+</div>
+
+
+
+<button onclick="goHome()">
+Return To AKSH
+</button>
+
+
+</div>
+
+
+
+<script>
+
+function goHome(){
+
+window.location.href="home.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
