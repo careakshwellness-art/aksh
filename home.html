@@ -62,7 +62,7 @@ font-size:48px;
 
 letter-spacing:15px;
 
-margin-bottom:30px;
+margin-bottom:25px;
 
 }
 
@@ -73,7 +73,7 @@ font-size:22px;
 
 line-height:1.5;
 
-margin-bottom:45px;
+margin-bottom:35px;
 
 opacity:.9;
 
@@ -84,18 +84,19 @@ opacity:.9;
 
 font-size:18px;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
+
 
 
 button{
 
 width:100%;
 
-padding:18px;
+padding:17px;
 
-margin:12px 0;
+margin:10px 0;
 
 border-radius:40px;
 
@@ -110,6 +111,19 @@ font-size:16px;
 backdrop-filter:blur(12px);
 
 }
+
+
+
+.small{
+
+margin-top:25px;
+
+font-size:15px;
+
+opacity:.8;
+
+}
+
 
 
 @keyframes fade{
@@ -131,6 +145,7 @@ transform:translateY(0);
 }
 
 }
+
 
 </style>
 
@@ -183,6 +198,16 @@ What brings you here today?
 </button>
 
 
+
+<div class="small">
+
+<button onclick="openAbout()">
+About AKSH
+</button>
+
+</div>
+
+
 </div>
 
 
@@ -214,6 +239,13 @@ window.location.href="talk.html";
 function openExploring(){
 
 window.location.href="exploring.html";
+
+}
+
+
+function openAbout(){
+
+window.location.href="about.html";
 
 }
 
