@@ -1,82 +1,169 @@
 /* ===========================
-AKSH FOUNDER PREMIUM
+AKSH FINAL HEADER POLISH
 =========================== */
 
-.founder-photo{
+.logo img{
 
-width:260px;
+width:52px;
 
-height:260px;
+height:52px;
 
-object-fit:cover;
+object-fit:contain;
 
-border-radius:50%;
+filter:
 
-
-border:
-
-6px solid rgba(201,162,39,.30);
-
-
-box-shadow:
-
-0 35px 90px rgba(59,27,90,.18);
-
-
-margin-bottom:45px;
-
-}
-
-
-
-.content-section:has(.founder-photo){
-
-background:
-
-linear-gradient(
-180deg,
-transparent,
-rgba(248,241,231,.45),
-transparent
+drop-shadow(
+0 10px 25px rgba(201,162,39,.25)
 );
 
 }
 
 
 
-.content-section:has(.founder-photo) h2{
+/* ===========================
+AKSH MENU BUTTON
+=========================== */
 
-font-size:48px;
+.menu-btn{
+
+background:
+
+rgba(255,255,255,.75);
+
+color:var(--deep-purple);
+
+border:
+
+1px solid rgba(201,162,39,.20);
+
+
+backdrop-filter:blur(15px);
 
 }
 
 
 
-.content-section:has(.founder-photo) p{
+/* ===========================
+AKSH FOOTER PREMIUM
+=========================== */
 
-max-width:700px;
+footer{
 
-font-size:21px;
+padding:110px 30px;
+
+
+background:
+
+linear-gradient(
+180deg,
+rgba(248,241,231,.5),
+rgba(239,226,247,.8)
+);
+
+
+border-top:
+
+1px solid rgba(201,162,39,.20);
 
 }
 
 
+
+footer img{
+
+width:130px;
+
+height:auto;
+
+margin-bottom:30px;
+
+}
+
+
+
+footer h3{
+
+font-size:40px;
+
+letter-spacing:8px;
+
+color:var(--deep-purple);
+
+}
+
+
+
+footer p{
+
+font-size:18px;
+
+color:#5A465F;
+
+}
+
+
+
+/* ===========================
+MOBILE FINAL ALIGNMENT
+=========================== */
 
 @media(max-width:768px){
 
 
-.founder-photo{
+header{
 
-width:200px;
-
-height:200px;
+padding:18px 22px;
 
 }
 
 
-.content-section:has(.founder-photo) h2{
+.logo img{
+
+width:42px;
+
+height:42px;
+
+}
+
+
+
+.hero-content{
+
+width:100%;
+
+}
+
+
+
+.content-section{
+
+padding:90px 22px;
+
+}
+
+
+
+.content-section h2{
 
 font-size:34px;
+
+}
+
+
+
+.content-section p{
+
+font-size:18px;
+
+}
+
+
+
+footer h3{
+
+font-size:30px;
+
+letter-spacing:5px;
 
 }
 
