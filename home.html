@@ -43,6 +43,31 @@ overflow:hidden;
 }
 
 
+
+.menu{
+
+position:fixed;
+
+top:25px;
+
+right:25px;
+
+padding:12px 20px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.3);
+
+color:white;
+
+font-size:15px;
+
+}
+
+
+
 .container{
 
 width:90%;
@@ -89,7 +114,6 @@ margin-bottom:20px;
 }
 
 
-
 button{
 
 width:100%;
@@ -113,19 +137,6 @@ backdrop-filter:blur(12px);
 }
 
 
-
-.small{
-
-margin-top:25px;
-
-font-size:15px;
-
-opacity:.8;
-
-}
-
-
-
 @keyframes fade{
 
 from{
@@ -146,13 +157,18 @@ transform:translateY(0);
 
 }
 
-
 </style>
 
 </head>
 
 
 <body>
+
+
+<button class="menu" onclick="openMenu()">
+☰ Menu
+</button>
+
 
 
 <div class="container">
@@ -198,21 +214,18 @@ What brings you here today?
 </button>
 
 
-
-<div class="small">
-
-<button onclick="openAbout()">
-About AKSH
-</button>
-
-</div>
-
-
 </div>
 
 
 
 <script>
+
+
+function openMenu(){
+
+window.location.href="menu.html";
+
+}
 
 
 function openAnxious(){
@@ -239,13 +252,6 @@ window.location.href="talk.html";
 function openExploring(){
 
 window.location.href="exploring.html";
-
-}
-
-
-function openAbout(){
-
-window.location.href="about.html";
 
 }
 
