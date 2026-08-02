@@ -1109,3 +1109,29 @@ letter-spacing:5px;
 
 }
 
+/* ===========================
+AKSH CENTER ALIGN FIX
+=========================== */
+
+
+.founder-photo{
+
+display:block;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+
+
+footer img{
+
+display:block;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
