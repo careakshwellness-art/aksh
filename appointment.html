@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH Appointment</title>
+<title>Book Session - AKSH</title>
 
 <style>
 
@@ -16,6 +16,7 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 body{
 
 min-height:100vh;
@@ -23,9 +24,9 @@ min-height:100vh;
 background:
 linear-gradient(
 180deg,
-#10252d,
-#23483f,
-#304b37
+#081b29,
+#173c3b,
+#263f32
 );
 
 color:white;
@@ -41,6 +42,7 @@ align-items:center;
 }
 
 
+
 .container{
 
 width:90%;
@@ -49,7 +51,10 @@ max-width:500px;
 
 text-align:center;
 
+animation:fade 1.5s ease;
+
 }
+
 
 
 .logo{
@@ -63,25 +68,69 @@ margin-bottom:30px;
 }
 
 
-input,textarea{
 
-width:100%;
+h1{
 
-margin:10px 0;
+font-size:32px;
 
-padding:16px;
+font-weight:400;
+
+margin-bottom:15px;
+
+}
+
+
+
+.subtitle{
+
+font-size:17px;
+
+opacity:.8;
+
+line-height:1.6;
+
+margin-bottom:30px;
+
+}
+
+
+
+.form{
+
+background:rgba(255,255,255,.1);
+
+border:1px solid rgba(255,255,255,.2);
 
 border-radius:25px;
 
+padding:25px;
+
+}
+
+
+
+input,
+textarea,
+select{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border-radius:15px;
+
 border:none;
 
-background:rgba(255,255,255,.15);
+outline:none;
 
-color:white;
+background:rgba(255,255,255,.9);
 
 font-size:15px;
 
 }
+
 
 
 textarea{
@@ -93,11 +142,14 @@ resize:none;
 }
 
 
+
 button{
 
 margin-top:20px;
 
-padding:16px 35px;
+width:100%;
+
+padding:16px;
 
 border-radius:40px;
 
@@ -110,6 +162,49 @@ color:white;
 font-size:16px;
 
 }
+
+
+
+button:hover{
+
+background:rgba(255,255,255,.25);
+
+}
+
+
+
+.note{
+
+margin-top:20px;
+
+font-size:14px;
+
+opacity:.7;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
 
 </style>
 
@@ -128,22 +223,74 @@ AKSH
 
 
 <h1>
-Request a Session
+Book A Session
 </h1>
 
 
-<input id="name" placeholder="Your name">
+<div class="subtitle">
+
+Take a moment for yourself.
+Share what you are experiencing and begin your journey.
+
+</div>
 
 
-<input id="email" placeholder="Your email">
+
+<div class="form">
 
 
-<textarea id="message" placeholder="What would you like to talk about?"></textarea>
+<input type="text" placeholder="Your Name">
 
 
-<button onclick="sendRequest()">
+<input type="email" placeholder="Your Email">
+
+
+<select>
+
+<option>
+Choose Session Type
+</option>
+
+<option>
+I feel anxious
+</option>
+
+<option>
+I feel overwhelmed
+</option>
+
+<option>
+I need someone to talk to
+</option>
+
+<option>
+I am exploring
+</option>
+
+</select>
+
+
+
+<textarea placeholder="Tell us a little about what brings you here"></textarea>
+
+
+
+<button onclick="submitAppointment()">
+
 Request Session
+
 </button>
+
+
+</div>
+
+
+
+<div class="note">
+
+Your information is handled with care and respect.
+
+</div>
 
 
 </div>
@@ -153,45 +300,14 @@ Request Session
 <script>
 
 
-function sendRequest(){
+function submitAppointment(){
 
-
-let name =
-document.getElementById("name").value;
-
-
-let email =
-document.getElementById("email").value;
-
-
-let message =
-document.getElementById("message").value;
-
-
-
-let subject =
-"AKSH Session Request";
-
-
-let body =
-"Name: "+name+
-"\nEmail: "+email+
-"\nMessage: "+message;
-
-
-
-window.location.href =
-"mailto:?subject="+
-encodeURIComponent(subject)+
-"&body="+
-encodeURIComponent(body);
-
+window.location.href="appointment-success.html";
 
 }
 
 
 </script>
-
 
 
 </body>
