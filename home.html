@@ -112,7 +112,6 @@ backdrop-filter:blur(12px);
 }
 
 
-
 @keyframes fade{
 
 from{
@@ -164,17 +163,18 @@ What brings you here today?
 </div>
 
 
-<button>
+
+<button onclick="openAnxious()">
 🌧️ I feel anxious
 </button>
 
 
-<button>
+<button onclick="openOverwhelmed()">
 🌊 I feel overwhelmed
 </button>
 
 
-<button>
+<button onclick="openTalk()">
 💬 I need someone to talk to
 </button>
 
@@ -185,6 +185,34 @@ What brings you here today?
 
 
 </div>
+
+
+
+<script>
+
+
+function openAnxious(){
+
+window.location.href="anxious.html";
+
+}
+
+
+function openOverwhelmed(){
+
+window.location.href="overwhelmed.html";
+
+}
+
+
+function openTalk(){
+
+window.location.href="talk.html";
+
+}
+
+
+</script>
 
 
 </body>
