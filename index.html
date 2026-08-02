@@ -4,121 +4,12 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AKSH</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html,body{
-width:100%;
-height:100%;
-overflow:hidden;
-background:black;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-
-
-video{
-
-position:fixed;
-
-top:50%;
-left:50%;
-
-transform:translate(-50%,-50%);
-
-width:100%;
-height:100%;
-
-object-fit:contain;
-
-background:black;
-
-}
-
-
-
-.screen{
-
-position:fixed;
-
-inset:0;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-}
-
-
-
-.controls{
-
-position:fixed;
-
-bottom:45px;
-
-width:100%;
-
-display:none;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-}
-
-
-
-button{
-
-margin:8px;
-
-padding:15px 28px;
-
-border-radius:50px;
-
-border:1px solid rgba(255,255,255,.4);
-
-background:rgba(0,0,0,.35);
-
-color:white;
-
-font-size:15px;
-
-backdrop-filter:blur(15px);
-
-}
-
-
-.logo{
-
-position:fixed;
-
-top:45px;
-
-width:100%;
-
-text-align:center;
-
-color:white;
-
-font-size:42px;
-
-letter-spacing:12px;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -126,101 +17,190 @@ letter-spacing:12px;
 <body>
 
 
-<video id="introVideo" playsinline>
+<div class="background"></div>
 
-<source src="./aksh-intro.MP4" type="video/mp4">
-
-</video>
+<div class="particles"></div>
 
 
+<header>
 
 <div class="logo">
+
+<img src="logo.png" alt="AKSH">
+
+</div>
+
+
+<button class="menu-btn">
+
+☰
+
+</button>
+
+</header>
+
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>AKSH</h1>
+
+
+<h2>Healing Beyond Words</h2>
+
+
+<p>
+A new dimension of emotional wellness,
+human connection and inner growth.
+</p>
+
+
+<a href="#" class="hero-button">
+
+Explore AKSH
+
+</a>
+
+
+</div>
+
+
+<div class="scroll-indicator">
+
+↓
+
+
+</div>
+
+
+</section>
+
+
+
+<section class="content-section">
+
+
+<div class="container">
+
+
+<div class="tag">
+
+ABOUT AKSH
+
+</div>
+
+
+<h2>
+A Space For The Mind
+</h2>
+
+
+<p>
+AKSH combines technology, compassion and emotional wellness
+to create a deeper human experience.
+</p>
+
+
+<a href="#" class="primary-btn">
+
+Discover
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+<section class="content-section">
+
+
+<div class="container">
+
+
+<div class="tag">
+
+EMOTIONS
+
+</div>
+
+
+<h2>
+
+Understand Yourself
+
+</h2>
+
+
+<div class="emotion-grid">
+
+
+<a href="#">
+
+Peace
+
+</a>
+
+
+<a href="#">
+
+Focus
+
+</a>
+
+
+<a href="#">
+
+Growth
+
+</a>
+
+
+<a href="#">
+
+Balance
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<footer>
+
+
+<img src="logo.png" width="90" alt="AKSH">
+
+
+<h3>
+
 AKSH
-</div>
+
+</h3>
 
 
+<p>
 
-<div class="screen" id="startScreen">
+A journey towards emotional wellness.
 
-<button onclick="startExperience()">
-✨ Begin Experience
-</button>
-
-</div>
+</p>
 
 
-
-<div class="controls" id="controls">
-
-
-<button onclick="muteSound()">
-🔇 Sound Off
-</button>
-
-
-<button onclick="skipIntro()">
-⏭ Skip
-</button>
-
-
-<button onclick="enterAKSH()">
-✨ Enter AKSH
-</button>
-
-
-</div>
-
-
-
-<script>
-
-
-const video=document.getElementById("introVideo");
-
-const startScreen=document.getElementById("startScreen");
-
-const controls=document.getElementById("controls");
-
-
-
-function startExperience(){
-
-startScreen.style.display="none";
-
-controls.style.display="flex";
-
-video.muted=false;
-
-video.play();
-
-}
-
-
-
-function muteSound(){
-
-video.muted=true;
-
-}
-
-
-
-function skipIntro(){
-
-enterAKSH();
-
-}
-
-
-
-function enterAKSH(){
-
-window.location.href="home.html";
-
-}
-
-
-</script>
+</footer>
 
 
 </body>
