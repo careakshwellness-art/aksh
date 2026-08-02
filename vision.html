@@ -41,6 +41,28 @@ align-items:center;
 }
 
 
+.menu{
+
+position:fixed;
+
+top:25px;
+
+right:25px;
+
+padding:12px 20px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.3);
+
+color:white;
+
+}
+
+
+
 .container{
 
 width:90%;
@@ -116,6 +138,12 @@ transform:translateY(0);
 <body>
 
 
+<button class="menu" onclick="openMenu()">
+☰ Menu
+</button>
+
+
+
 <div class="container">
 
 
@@ -141,6 +169,19 @@ of understanding, calm, and support.
 
 
 </div>
+
+
+
+<script>
+
+function openMenu(){
+
+window.location.href="menu.html";
+
+}
+
+</script>
+
 
 
 </body>
