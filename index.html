@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AKSH | Healing Beyond Words</title>
 
@@ -14,11 +13,15 @@ content="width=device-width, initial-scale=1.0">
 
 </head>
 
+
 <body onload="checkIntro()">
+
 
 <div class="background"></div>
 
 <div class="particles"></div>
+
+
 
 <header>
 
@@ -28,6 +31,7 @@ content="width=device-width, initial-scale=1.0">
 
 </div>
 
+
 <button class="menu-btn" id="menuBtn">
 
 ☰
@@ -36,13 +40,17 @@ content="width=device-width, initial-scale=1.0">
 
 </header>
 
+
+
 <nav class="side-menu" id="sideMenu">
+
 
 <button class="close-btn" id="closeBtn">
 
 ✕
 
 </button>
+
 
 <a href="#hero">Home</a>
 
@@ -54,22 +62,31 @@ content="width=device-width, initial-scale=1.0">
 
 <a href="#footer">Contact</a>
 
+
 </nav>
+
+
+
+
 
 <section class="hero" id="hero">
 
+
 <div class="hero-content">
+
 
 <img
 class="hero-logo"
 src="aksh-logo.png.PNG"
 alt="AKSH Logo">
 
+
 <h2>
 
 Healing Beyond Words
 
 </h2>
+
 
 <p>
 
@@ -78,13 +95,19 @@ human connection and inner growth.
 
 </p>
 
+
+
 <a href="#about" class="hero-button">
 
 Explore AKSH
 
 </a>
 
+
+
 </div>
+
+
 
 <div class="scroll-indicator">
 
@@ -92,11 +115,20 @@ Explore AKSH
 
 </div>
 
+
 </section>
+
+
+
+
+
+
 
 <section class="content-section" id="about">
 
+
 <div class="container">
+
 
 <div class="tag">
 
@@ -104,11 +136,15 @@ ABOUT AKSH
 
 </div>
 
+
+
 <h2>
 
 A Space For The Mind
 
 </h2>
+
+
 
 <p>
 
@@ -118,19 +154,34 @@ A place where people feel heard, supported and empowered to grow.
 
 </p>
 
+
+
 <a href="#founder" class="primary-btn">
 
 Discover AKSH
 
 </a>
 
+
+
 </div>
+
 
 </section>
 
+
+
+
+
+
+
+
+
 <section class="content-section" id="founder">
 
+
 <div class="container">
+
 
 <div class="tag">
 
@@ -138,16 +189,22 @@ FOUNDER
 
 </div>
 
+
+
 <img
 class="founder-photo"
 src="meghana.kaverappa.jpg"
 alt="Founder">
+
+
 
 <h2>
 
 The Vision Behind AKSH
 
 </h2>
+
+
 
 <p>
 
@@ -156,13 +213,26 @@ to make emotional wellness feel more human, more accessible and more meaningful 
 
 </p>
 
+
+
 </div>
+
 
 </section>
 
+
+
+
+
+
+
+
+
 <section class="content-section" id="journey">
 
+
 <div class="container">
+
 
 <div class="tag">
 
@@ -170,11 +240,15 @@ EMOTIONAL JOURNEY
 
 </div>
 
+
+
 <h2>
 
 How Are You Feeling Today?
 
 </h2>
+
+
 
 <p>
 
@@ -182,49 +256,83 @@ Choose what best describes how you're feeling. AKSH will guide you to the right 
 
 </p>
 
+
+
 <div class="emotion-grid">
 
-<a href="#">
 
-😔<br><br>
+<a href="anxious.html">
+
+😔
+<br><br>
+
 I'm Feeling Anxious
 
 </a>
 
-<a href="#">
 
-😞<br><br>
+
+<a href="overwhelmed.html">
+
+😞
+<br><br>
+
 I'm Feeling Overwhelmed
 
 </a>
 
-<a href="#">
 
-❤️<br><br>
+
+<a href="talk.html">
+
+❤️
+<br><br>
+
 I Need Someone To Talk To
 
 </a>
 
-<a href="#">
 
-✨<br><br>
+
+<a href="exploring.html">
+
+✨
+<br><br>
+
 I'm Just Exploring
 
 </a>
 
-</div>
+
 
 </div>
+
+
+
+</div>
+
 
 </section>
 
+
+
+
+
+
+
+
+
 <footer id="footer">
 
+
 <div class="container">
+
 
 <img
 src="aksh-logo.png.PNG"
 alt="AKSH Logo">
+
+
 
 <h3>
 
@@ -232,11 +340,15 @@ AKSH
 
 </h3>
 
+
+
 <p>
 
 Healing Beyond Words
 
 </p>
+
+
 
 <p>
 
@@ -245,30 +357,54 @@ human connection and inner growth.
 
 </p>
 
+
+
 <p>
 
 © 2026 AKSH. All Rights Reserved.
 
 </p>
 
+
+
 </div>
+
 
 </footer>
 
+
+
+
+
+
+
 <script src="script.js"></script>
+
+
+
 <script>
+
 
 function checkIntro(){
 
+
 if(!sessionStorage.getItem("akshIntroSeen")){
+
 
 window.location.href="intro.html";
 
-}
 
 }
+
+
+}
+
+
 
 </script>
+
+
+
 </body>
 
 </html>
