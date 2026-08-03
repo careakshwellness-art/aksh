@@ -9,97 +9,79 @@
 
 <title>AKSH | Welcome</title>
 
-<link rel="stylesheet" href="intro.css?v=2">
+<link rel="stylesheet" href="intro.css?v=3">
 
 </head>
 
-
 <body>
-
 
 <div class="intro-page">
 
+<!-- ===========================
+BACKGROUND POSTERS
+=========================== -->
 
-<!-- BACKGROUND POSTER -->
+<img
+class="poster poster-mobile"
+src="intro-mobile.png.PNG"
+alt="AKSH Mobile Poster">
 
-<picture class="poster">
+<img
+class="poster poster-tablet"
+src="intro-tablet.png.PNG"
+alt="AKSH Tablet Poster">
 
-<source media="(min-width:2560px)" srcset="intro-large-display.png.PNG">
+<img
+class="poster poster-desktop"
+src="intro-desktop.png.PNG"
+alt="AKSH Desktop Poster">
 
-<source media="(min-width:1024px)" srcset="intro-desktop.png.PNG">
+<img
+class="poster poster-large"
+src="intro-large-display.png.PNG"
+alt="AKSH Large Display Poster">
 
-<source media="(min-width:768px)" srcset="intro-tablet.png.PNG">
-
-<img src="intro-mobile.png.PNG" alt="AKSH Intro">
-
-</picture>
-
-
-
-<!-- VIDEO AREA -->
+<!-- ===========================
+VIDEO LAYER
+=========================== -->
 
 <div class="video-container">
 
-
-<video id="akshVideo" playsinline>
+<video
+id="akshVideo"
+playsinline
+preload="auto">
 
 <source src="aksh-intro.MOV" type="video/mp4">
 
 </video>
 
-
-<button id="playBtn" class="play-btn">
+<button
+id="playBtn"
+class="play-btn">
 
 ▶
 
 </button>
 
-
 </div>
 
+<!-- ===========================
+TOP BUTTONS
+=========================== -->
 
-
-
-<!-- SOUND BUTTON -->
-
-<button id="soundBtn" class="sound-btn">
+<button
+id="soundBtn"
+class="sound-btn">
 
 🔇
 
 </button>
 
-
-
-
-<!-- SKIP BUTTON -->
-
-<button id="skipBtn" class="skip-btn">
+<button
+id="skipBtn"
+class="skip-btn">
 
 SKIP INTRO
 
 </button>
-
-
-
-
-<!-- BEGIN BUTTON -->
-
-<button id="beginBtn" class="begin-btn">
-
-BEGIN YOUR JOURNEY
-
-</button>
-
-
-
-</div>
-
-
-
-
-<script src="intro.js"></script>
-
-
-</body>
-
-</html>
