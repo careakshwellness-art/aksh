@@ -1,210 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AKSH | Welcome</title>
-
 <link rel="stylesheet" href="intro.css">
-
 </head>
-
-
 <body>
-
-
+<!-- BACKGROUND -->
 <div class="intro-background"></div>
-
-
 <!-- =========================
-BOX 1 : VIDEO INTRO
+BOX 1 : WELCOME + VIDEO
 ========================= -->
-
-
-<section class="intro-box video-box">
-
-
-<div class="welcome-text">
-
+<section class="intro-box box-one">
+<img 
+class="top-logo"
+src="aksh-icon.png.PNG"
+alt="AKSH Logo">
+<div class="welcome-content">
 <h1>
 WELCOME TO AKSH
 </h1>
-
 <p>
-Healing Beyond Words
+A SPACE FOR HEALING,
+CONNECTION AND ENDLESS POSSIBILITIES.
 </p>
-
 </div>
-
-
-
 <div class="video-frame">
-
-
 <video 
 id="akshVideo"
-poster="aksh-intro-design.png.jpg"
-playsinline
->
-
+poster="aksh-intro-design.png.PNG"
+playsinline>
 <source src="aksh-intro.MP4" type="video/mp4">
-
 </video>
-
-
-
 <button class="play-btn" id="playBtn">
-
 ▶
-
 </button>
-
-
+<div class="video-actions">
+<button id="skipBtn">
+SKIP INTRO
+</button>
+<button id="soundBtn">
+🔇 SOUND OFF
+</button>
 </div>
-
-
-
+</div>
 </section>
-
-
-
-
-
 <!-- =========================
 BOX 2 : EMOTIONAL JOURNEY
 ========================= -->
-
-
-<section class="intro-box emotion-box">
-
-
+<section class="intro-box box-two">
 <h2>
-
 HOW ARE YOU FEELING TODAY?
-
 </h2>
-
-
-
 <div class="emotion-cards">
-
-
-<div class="emotion-card">
-
-<span>
-😔
-</span>
-
+<div class="emotion-card" onclick="openEmotion('anxious.html')">
+<span>😔</span>
 <p>
 Anxious
 </p>
-
 </div>
-
-
-
-<div class="emotion-card">
-
-<span>
-😞
-</span>
-
+<div class="emotion-card" onclick="openEmotion('overwhelmed.html')">
+<span>😞</span>
 <p>
 Overwhelmed
 </p>
-
 </div>
-
-
-
-<div class="emotion-card">
-
-<span>
-✨
-</span>
-
+<div class="emotion-card" onclick="openEmotion('exploring.html')">
+<span>✨</span>
 <p>
 Just Exploring
 </p>
-
 </div>
-
-
-
-<div class="emotion-card">
-
-<span>
-❤️
-</span>
-
+<div class="emotion-card" onclick="openEmotion('talk.html')">
+<span>❤️</span>
 <p>
 Need Someone To Talk
 </p>
-
 </div>
-
-
 </div>
-
-
-
-<button class="talk-btn">
-
-NEED SOMEONE TO TALK
-
-</button>
-
-
 </section>
-
-
-
-
-
-
 <!-- =========================
 BOX 3 : EXPERIENCE AKSH
 ========================= -->
-
-
-<section class="intro-box journey-box">
-
-
-<div class="journey-content">
-
-
+<section class="intro-box box-three">
 <h2>
-
-EXPERIENCE THE WORLD OF AKSH
-
+EXPERIENCE
+<br>
+THE WORLD OF AKSH
 </h2>
-
-
-
-<button class="begin-btn">
-
+<img
+class="journey-logo"
+src="aksh-logo.png.PNG"
+alt="AKSH">
+<button class="begin-btn" id="beginBtn">
 BEGIN YOUR JOURNEY
-
 </button>
-
-
-</div>
-
-
 </section>
-
-
-
-
-
-
 <script src="intro.js"></script>
-
-
 </body>
-
 </html>
