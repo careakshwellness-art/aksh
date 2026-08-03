@@ -23,7 +23,6 @@ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 
 
 
-
 .intro-page{
 
 position:relative;
@@ -40,11 +39,7 @@ background:#000;
 
 
 
-
-/* ===============================
-POSTER
-=============================== */
-
+/* POSTER */
 
 .poster{
 
@@ -75,29 +70,21 @@ display:block;
 
 
 
-
-
-/* ===============================
-VIDEO FRAME
-(WE WILL FINE TUNE THIS)
-=============================== */
-
+/* VIDEO FRAME */
 
 .video-container{
 
 position:absolute;
 
-top:43%;
+top:57%;
 
 left:50%;
 
 transform:translate(-50%,-50%);
 
-
 width:72%;
 
 height:28%;
-
 
 overflow:hidden;
 
@@ -107,9 +94,7 @@ z-index:5;
 
 background:#000;
 
-
 }
-
 
 
 
@@ -125,11 +110,7 @@ object-fit:cover;
 
 
 
-
-/* ===============================
-PLAY BUTTON
-=============================== */
-
+/* PLAY BUTTON */
 
 .play-btn{
 
@@ -141,7 +122,6 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-
 width:75px;
 
 height:75px;
@@ -150,27 +130,19 @@ border-radius:50%;
 
 border:none;
 
-
 font-size:30px;
 
 cursor:pointer;
-
 
 background:rgba(255,255,255,.85);
 
 color:#3B1B5A;
 
-
 }
 
 
 
-
-
-/* ===============================
-BUTTONS
-=============================== */
-
+/* TOP BUTTONS */
 
 .sound-btn,
 .skip-btn{
@@ -181,26 +153,21 @@ top:35px;
 
 z-index:10;
 
-
 border:none;
 
 border-radius:40px;
 
-
 padding:12px 25px;
-
 
 background:rgba(255,255,255,.75);
 
 backdrop-filter:blur(10px);
-
 
 font-weight:600;
 
 cursor:pointer;
 
 color:#3B1B5A;
-
 
 }
 
@@ -222,7 +189,7 @@ right:35px;
 
 
 
-
+/* BEGIN BUTTON */
 
 .begin-btn{
 
@@ -232,20 +199,15 @@ bottom:70px;
 
 left:50%;
 
-
 transform:translateX(-50%);
-
 
 z-index:10;
 
-
 padding:18px 50px;
-
 
 border:none;
 
 border-radius:50px;
-
 
 background:linear-gradient(
 90deg,
@@ -253,50 +215,34 @@ background:linear-gradient(
 #C9A227
 );
 
-
 color:white;
-
 
 font-size:18px;
 
 font-weight:700;
 
-
 cursor:pointer;
-
 
 }
 
 
 
-
-
-/* ===============================
-MOBILE
-=============================== */
-
+/* MOBILE */
 
 @media(max-width:768px){
 
 
-
 .video-container{
 
-
-top:42%;
-
+top:57%;
 
 width:82%;
 
-
 height:24%;
-
 
 border-radius:20px;
 
-
 }
-
 
 
 .sound-btn{
@@ -317,18 +263,12 @@ font-size:12px;
 }
 
 
-
 .begin-btn{
-
 
 bottom:45px;
 
-
 width:80%;
 
-
 }
-
-
 
 }
