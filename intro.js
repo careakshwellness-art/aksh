@@ -1,132 +1,91 @@
-/* =================================
-AKSH INTRO SYSTEM
-INTRO.JS
-================================= */
-
+// =====================================
+// AKSH INTRO V2
+// =====================================
 
 const video = document.getElementById("akshVideo");
 const playBtn = document.getElementById("playBtn");
-
 const soundBtn = document.getElementById("soundBtn");
 const skipBtn = document.getElementById("skipBtn");
 const beginBtn = document.getElementById("beginBtn");
 
+// --------------------------
+// PLAY VIDEO
+// --------------------------
 
+playBtn.addEventListener("click", () => {
 
-/* ===============================
-VIDEO PLAY
-=============================== */
+    video.play();
 
-
-playBtn.addEventListener("click",()=>{
-
-
-if(video.paused){
-
-video.play();
-
-playBtn.style.opacity="0";
-
-}
+    playBtn.style.display = "none";
 
 });
 
+// --------------------------
+// SOUND
+// --------------------------
 
+video.muted = true;
 
+soundBtn.addEventListener("click", () => {
 
+    video.muted = !video.muted;
 
-/* ===============================
-VIDEO END
-=============================== */
-
-
-video.addEventListener("ended",()=>{
-
-
-playBtn.style.opacity="1";
-
+    soundBtn.textContent = video.muted ? "🔇" : "🔊";
 
 });
 
+// --------------------------
+// VIDEO FINISHED
+// --------------------------
 
+video.addEventListener("ended", () => {
 
+    sessionStorage.setItem("akshIntroSeen","true");
 
-
-/* ===============================
-SOUND BUTTON
-=============================== */
-
-
-let soundOn=false;
-
-
-soundBtn.addEventListener("click",()=>{
-
-
-soundOn=!soundOn;
-
-
-video.muted=!soundOn;
-
-
-if(soundOn){
-
-soundBtn.innerHTML="🔊";
-
-}
-else{
-
-soundBtn.innerHTML="🔇";
-
-}
-
+    window.location.href="index.html";
 
 });
 
+// --------------------------
+// SKIP INTRO
+// --------------------------
 
+skipBtn.addEventListener("click", () => {
 
+    sessionStorage.setItem("akshIntroSeen","true");
 
-
-
-/* ===============================
-SKIP INTRO
-=============================== */
-
-
-skipBtn.addEventListener("click",()=>{
-
-
-sessionStorage.setItem(
-"akshIntroSeen",
-"true"
-);
-
-
-window.location.href="index.html";
-
+    window.location.href="index.html";
 
 });
 
+// --------------------------
+// BEGIN JOURNEY
+// --------------------------
 
+beginBtn.addEventListener("click", () => {
 
+    sessionStorage.setItem("akshIntroSeen","true");
 
+    window.location.href="index.html";
 
+});
 
-/* ===============================
-BEGIN JOURNEY
-=============================== */
+// --------------------------
+// HIDE PLAY BUTTON
+// --------------------------
 
+video.addEventListener("playing", () => {
 
-beginBtn.addEventListener("click",()=>{
+    playBtn.style.display = "none";
 
+});
 
-sessionStorage.setItem(
-"akshIntroSeen",
-"true"
-);
+video.addEventListener("pause", () => {
 
+    if(!video.ended){
 
-window.location.href="index.html";
+        playBtn.style.display = "flex";
 
+    }
 
 });
