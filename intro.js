@@ -66,16 +66,14 @@ cards.forEach(card => {
 
 
 
-
 // BEGIN JOURNEY BUTTON
 
 const beginBtn = document.querySelector(".begin-btn");
 
-
 beginBtn.addEventListener("click",function(){
 
+    sessionStorage.setItem("akshIntroSeen","true");
 
     window.location.href="index.html";
-
 
 });
