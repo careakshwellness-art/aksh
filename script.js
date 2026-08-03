@@ -1,111 +1,59 @@
-// ======================================
-// AKSH PREMIUM WEBSITE V4
-// ======================================
+// =====================================
+// AKSH INTRO PAGE
+// =====================================
 
-window.addEventListener("load", () => {
+const video=document.getElementById("introVideo");
 
-document.body.classList.add("loaded");
+const soundButton=document.getElementById("soundButton");
 
-});
+const skipButton=document.getElementById("skipButton");
 
-// Smooth Navigation
+const enterButton=document.getElementById("enterButton");
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+// Start muted
 
-anchor.addEventListener("click",function(e){
+video.muted=true;
 
-e.preventDefault();
+// Sound Button
 
-const target=document.querySelector(this.getAttribute("href"));
+soundButton.addEventListener("click",()=>{
 
-if(target){
+video.muted=!video.muted;
 
-target.scrollIntoView({
+if(video.muted){
 
-behavior:"smooth"
-
-});
-
-}
-
-});
-
-});
-
-// Fade Animation
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-},{
-
-threshold:.15
-
-});
-
-document.querySelectorAll(
-
-"section,.service-card,.emotion-card,.founder-image"
-
-).forEach(el=>{
-
-el.style.opacity="0";
-
-el.style.transform="translateY(60px)";
-
-el.style.transition="all .8s ease";
-
-observer.observe(el);
-
-});
-
-// Header Background
-
-window.addEventListener("scroll",()=>{
-
-const header=document.querySelector("header");
-
-if(window.scrollY>60){
-
-header.style.background="rgba(255,255,255,.92)";
-
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.06)";
+soundButton.innerHTML="🔇 Sound Off";
 
 }else{
 
-header.style.background="rgba(255,255,255,.72)";
-
-header.style.boxShadow="none";
+soundButton.innerHTML="🔊 Sound On";
 
 }
 
 });
 
-// Emotion Cards Hover
+// Skip Intro
 
-document.querySelectorAll(".emotion-card").forEach(card=>{
+skipButton.addEventListener("click",()=>{
 
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-12px) scale(1.03)";
+window.location.href="home.html";
 
 });
 
-card.addEventListener("mouseleave",()=>{
+// Video Finished
 
-card.style.transform="translateY(0) scale(1)";
+video.addEventListener("ended",()=>{
+
+window.location.href="home.html";
 
 });
+
+// Enter Button
+
+enterButton.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+window.location.href="home.html";
 
 });
