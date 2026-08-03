@@ -1,105 +1,439 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =====================================
+AKSH INTRO V2
+===================================== */
 
-<head>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<meta charset="UTF-8">
+html{
+scroll-behavior:smooth;
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+body{
 
-<title>AKSH | Welcome</title>
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 
-<link rel="stylesheet" href="intro.css?v=2">
+background:#000;
 
-</head>
+overflow-x:hidden;
 
+}
 
-<body>
+.intro-page{
 
+position:relative;
 
-<div class="intro-page">
+width:100%;
 
+min-height:300vh;
 
-<!-- BACKGROUND POSTER -->
+background:#000;
 
-<picture class="poster">
+}
 
-<source media="(min-width:2560px)" srcset="intro-large-display.png.PNG">
+/* ===========================
+POSTERS
+=========================== */
 
-<source media="(min-width:1024px)" srcset="intro-desktop.png.PNG">
+.poster{
 
-<source media="(min-width:768px)" srcset="intro-tablet.png.PNG">
+position:absolute;
 
-<img src="intro-mobile.png.PNG" alt="AKSH Intro">
+left:0;
 
-</picture>
+top:0;
 
+width:100%;
 
+height:100vh;
 
-<!-- VIDEO AREA -->
+object-fit:cover;
 
-<div class="video-container">
+display:none;
 
+}
 
-<video id="akshVideo" playsinline>
+.poster-mobile{
 
-<source src="aksh-intro.MOV" type="video/mp4">
+display:block;
 
-</video>
+}
 
+/* Tablet */
 
-<button id="playBtn" class="play-btn">
+@media(min-width:768px){
 
-▶
+.poster-mobile{
 
-</button>
+display:none;
 
+}
 
-</div>
+.poster-tablet{
 
+display:block;
 
+}
 
+}
 
-<!-- SOUND BUTTON -->
+/* Desktop */
 
-<button id="soundBtn" class="sound-btn">
+@media(min-width:1024px){
 
-🔇
+.poster-tablet{
 
-</button>
+display:none;
 
+}
 
+.poster-desktop{
 
+display:block;
 
-<!-- SKIP BUTTON -->
+}
 
-<button id="skipBtn" class="skip-btn">
+}
 
-SKIP INTRO
+/* Large Display */
 
-</button>
+@media(min-width:2560px){
 
+.poster-desktop{
 
+display:none;
 
+}
 
-<!-- BEGIN BUTTON -->
+.poster-large{
 
-<button id="beginBtn" class="begin-btn">
+display:block;
 
-BEGIN YOUR JOURNEY
+}
 
-</button>
+}
 
+/* ===========================
+VIDEO
+=========================== */
 
+.video-container{
 
-</div>
+position:fixed;
 
+left:50%;
 
+top:53%;
 
+transform:translate(-50%,-50%);
 
-<script src="intro.js"></script>
+width:84%;
 
+height:23%;
 
-</body>
+border-radius:20px;
 
-</html>
+overflow:hidden;
+
+background:#000;
+
+z-index:100;
+
+}
+
+.video-container video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.play-btn{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:72px;
+
+height:72px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.9);
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+/* ===========================
+TOP BUTTONS
+=========================== */
+
+.sound-btn,
+.skip-btn{
+
+position:fixed;
+
+top:25px;
+
+z-index:200;
+
+padding:12px 22px;
+
+border:none;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(10px);
+
+color:#3B1B5A;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.sound-btn{
+
+right:150px;
+
+}
+
+.skip-btn{
+
+right:25px;
+
+}
+
+/* ===========================
+EMOTION SECTION
+=========================== */
+
+.emotion-section{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px 20px;
+
+background:#FFF9F0;
+
+}
+
+.emotion-section h2{
+
+font-size:42px;
+
+color:#3B1B5A;
+
+margin-bottom:50px;
+
+text-align:center;
+
+}
+
+.emotion-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+max-width:800px;
+
+width:100%;
+
+}
+
+.emotion-card{
+
+background:white;
+
+border-radius:30px;
+
+padding:35px 20px;
+
+text-decoration:none;
+
+text-align:center;
+
+color:#3B1B5A;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.emotion-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.emotion-icon{
+
+font-size:52px;
+
+margin-bottom:15px;
+
+}
+
+.emotion-title{
+
+font-size:20px;
+
+font-weight:700;
+
+}
+
+/* ===========================
+JOURNEY SECTION
+=========================== */
+
+.journey-section{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:linear-gradient(#FFF9F0,#F5EDF8);
+
+padding:40px 20px;
+
+}
+
+.journey-logo{
+
+width:90px;
+
+margin-bottom:30px;
+
+}
+
+.journey-section h2{
+
+font-size:54px;
+
+line-height:1.2;
+
+color:#3B1B5A;
+
+margin-bottom:50px;
+
+}
+
+.begin-btn{
+
+padding:18px 50px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#7C3AED,#C9A227);
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+/* ===========================
+MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.video-container{
+
+width:82%;
+
+height:22%;
+
+top:53%;
+
+}
+
+.sound-btn{
+
+right:115px;
+
+padding:10px 16px;
+
+}
+
+.skip-btn{
+
+right:15px;
+
+padding:10px 16px;
+
+font-size:12px;
+
+}
+
+.emotion-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.emotion-section h2{
+
+font-size:30px;
+
+}
+
+.journey-section h2{
+
+font-size:34px;
+
+}
+
+.begin-btn{
+
+width:85%;
+
+}
+
+}
