@@ -7,403 +7,105 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH | Healing Beyond Words</title>
+<title>AKSH | Welcome</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+<body>
 
-<body onload="checkIntro()">
+<div class="intro-page">
 
+<!-- Mobile Poster -->
 
-<div class="background"></div>
+<img
+id="poster-mobile"
+class="intro-poster"
+src="intro-mobile.png.PNG"
+alt="AKSH Mobile Intro">
 
-<div class="particles"></div>
+<!-- Tablet Poster -->
 
+<img
+id="poster-tablet"
+class="intro-poster"
+src="intro-tablet.png.PNG"
+alt="AKSH Tablet Intro">
 
+<!-- Desktop Poster -->
 
-<header>
+<img
+id="poster-desktop"
+class="intro-poster"
+src="intro-desktop.png.PNG"
+alt="AKSH Desktop Intro">
 
-<div class="logo">
+<!-- Large Display Poster -->
 
-<img src="aksh-icon.png.PNG" alt="AKSH Icon">
+<img
+id="poster-large"
+class="intro-poster"
+src="intro-large-display.png.PNG"
+alt="AKSH Large Display Intro">
 
-</div>
+<!-- Intro Video -->
 
+<video
 
-<button class="menu-btn" id="menuBtn">
+id="introVideo"
 
-☰
+autoplay
+
+muted
+
+playsinline
+
+>
+
+<source src="intro.mp4" type="video/mp4">
+
+</video>
+
+<!-- Controls -->
+
+<div class="intro-controls">
+
+<button id="soundButton">
+
+🔇 Sound Off
 
 </button>
 
-</header>
+<button id="skipButton">
 
-
-
-<nav class="side-menu" id="sideMenu">
-
-
-<button class="close-btn" id="closeBtn">
-
-✕
+⏭ Skip Intro
 
 </button>
 
+<a href="home.html" id="enterButton">
 
-<a href="#hero">Home</a>
-
-<a href="#about">About AKSH</a>
-
-<a href="#founder">Founder</a>
-
-<a href="#journey">Emotional Journey</a>
-
-<a href="#footer">Contact</a>
-
-
-</nav>
-
-
-
-
-
-<section class="hero" id="hero">
-
-
-<div class="hero-content">
-
-
-<img
-class="hero-logo"
-src="aksh-logo.png.PNG"
-alt="AKSH Logo">
-
-
-<h2>
-
-Healing Beyond Words
-
-</h2>
-
-
-<p>
-
-A new dimension of emotional wellness,
-human connection and inner growth.
-
-</p>
-
-
-
-<a href="#about" class="hero-button">
-
-Explore AKSH
+Enter AKSH →
 
 </a>
 
+</div>
 
+<!-- Overlay Content -->
+
+<div class="intro-overlay">
+
+<div class="video-frame">
+
+<!-- The video is positioned over the poster using CSS -->
 
 </div>
 
-
-
-<div class="scroll-indicator">
-
-↓
-
 </div>
 
-
-</section>
-
-
-
-
-
-
-
-<section class="content-section" id="about">
-
-
-<div class="container">
-
-
-<div class="tag">
-
-ABOUT AKSH
-
 </div>
-
-
-
-<h2>
-
-A Space For The Mind
-
-</h2>
-
-
-
-<p>
-
-AKSH brings technology, compassion and emotional wellness together to create a deeper human experience.
-
-A place where people feel heard, supported and empowered to grow.
-
-</p>
-
-
-
-<a href="#founder" class="primary-btn">
-
-Discover AKSH
-
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="content-section" id="founder">
-
-
-<div class="container">
-
-
-<div class="tag">
-
-FOUNDER
-
-</div>
-
-
-
-<img
-class="founder-photo"
-src="meghana.kaverappa.jpg"
-alt="Founder">
-
-
-
-<h2>
-
-The Vision Behind AKSH
-
-</h2>
-
-
-
-<p>
-
-AKSH was created with one vision:
-to make emotional wellness feel more human, more accessible and more meaningful for everyone.
-
-</p>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="content-section" id="journey">
-
-
-<div class="container">
-
-
-<div class="tag">
-
-EMOTIONAL JOURNEY
-
-</div>
-
-
-
-<h2>
-
-How Are You Feeling Today?
-
-</h2>
-
-
-
-<p>
-
-Choose what best describes how you're feeling. AKSH will guide you to the right experience.
-
-</p>
-
-
-
-<div class="emotion-grid">
-
-
-<a href="anxious.html">
-
-😔
-<br><br>
-
-I'm Feeling Anxious
-
-</a>
-
-
-
-<a href="overwhelmed.html">
-
-😞
-<br><br>
-
-I'm Feeling Overwhelmed
-
-</a>
-
-
-
-<a href="talk.html">
-
-❤️
-<br><br>
-
-I Need Someone To Talk To
-
-</a>
-
-
-
-<a href="exploring.html">
-
-✨
-<br><br>
-
-I'm Just Exploring
-
-</a>
-
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<footer id="footer">
-
-
-<div class="container">
-
-
-<img
-src="aksh-logo.png.PNG"
-alt="AKSH Logo">
-
-
-
-<h3>
-
-AKSH
-
-</h3>
-
-
-
-<p>
-
-Healing Beyond Words
-
-</p>
-
-
-
-<p>
-
-A journey towards emotional wellness,
-human connection and inner growth.
-
-</p>
-
-
-
-<p>
-
-© 2026 AKSH. All Rights Reserved.
-
-</p>
-
-
-
-</div>
-
-
-</footer>
-
-
-
-
-
-
 
 <script src="script.js"></script>
-
-
-
-<script>
-
-
-function checkIntro(){
-
-
-if(!sessionStorage.getItem("akshIntroSeen")){
-
-
-window.location.href="intro.html";
-
-
-}
-
-
-}
-
-
-
-</script>
-
-
 
 </body>
 
