@@ -14,7 +14,7 @@ content="width=device-width, initial-scale=1.0">
 
 </head>
 
-<body>
+<body onload="checkIntro()">
 
 <div class="background"></div>
 
@@ -140,7 +140,7 @@ FOUNDER
 
 <img
 class="founder-photo"
-src="founder.jpg"
+src="meghana.kaverappa.jpg"
 alt="Founder">
 
 <h2>
@@ -256,7 +256,19 @@ human connection and inner growth.
 </footer>
 
 <script src="script.js"></script>
+<script>
 
+function checkIntro(){
+
+if(!sessionStorage.getItem("akshIntroSeen")){
+
+window.location.href="intro.html";
+
+}
+
+}
+
+</script>
 </body>
 
 </html>
