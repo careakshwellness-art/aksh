@@ -1,64 +1,27 @@
-// =================================
-// AKSH INTRO PAGE
-// INTRO.JS
-// PART 3
-// =================================
+/* ===================================
+AKSH INTRO VIDEO CONTROL
+=================================== */
 
-
-// VIDEO PLAY BUTTON
 
 const video = document.getElementById("akshVideo");
+
 const playBtn = document.getElementById("playBtn");
+
 
 
 playBtn.addEventListener("click", function(){
 
-    if(video.paused){
 
-        video.play();
-
-        playBtn.style.opacity="0";
-
-    }
-
-});
+if(video.paused){
 
 
-
-// SHOW PLAY BUTTON AGAIN WHEN VIDEO ENDS
-
-video.addEventListener("ended", function(){
-
-    playBtn.style.opacity="1";
-
-});
+video.play();
 
 
+playBtn.style.opacity="0";
 
 
-
-// EMOTION CARD CLICK ANIMATION
-
-const cards = document.querySelectorAll(".emotion-card");
-
-
-cards.forEach(card => {
-
-
-    card.addEventListener("click", function(){
-
-
-        card.style.transform="scale(1.08)";
-
-
-        setTimeout(()=>{
-
-            card.style.transform="";
-
-        },300);
-
-
-    });
+}
 
 
 });
@@ -66,14 +29,11 @@ cards.forEach(card => {
 
 
 
-// BEGIN JOURNEY BUTTON
 
-const beginBtn = document.querySelector(".begin-btn");
+video.addEventListener("ended",function(){
 
-beginBtn.addEventListener("click",function(){
 
-    sessionStorage.setItem("akshIntroSeen","true");
+playBtn.style.opacity="1";
 
-    window.location.href="index.html";
 
 });
