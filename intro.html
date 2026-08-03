@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKSH Intro</title>
+<title>AKSH | Welcome</title>
 
 <link rel="stylesheet" href="intro.css">
 
@@ -17,31 +17,38 @@
 <body>
 
 
-<div class="intro-screen">
+<div class="intro-page">
 
 
-<img 
-class="intro-poster"
-src="aksh-intro-design.png.PNG"
-alt="AKSH Intro">
+<!-- BACKGROUND POSTER -->
+
+<picture class="poster">
+
+<source media="(min-width:2560px)" srcset="intro-large-display.png.PNG">
+
+<source media="(min-width:1024px)" srcset="intro-desktop.png.PNG">
+
+<source media="(min-width:768px)" srcset="intro-tablet.png.PNG">
+
+<img src="intro-mobile.png.PNG" alt="AKSH Intro">
+
+</picture>
 
 
-<div class="video-area">
+
+<!-- VIDEO AREA -->
+
+<div class="video-container">
 
 
-<video 
-id="akshVideo"
-poster="aksh-intro-design.png.PNG"
-playsinline>
+<video id="akshVideo" playsinline>
 
-
-<source src="aksh-intro.MP4" type="video/mp4">
-
+<source src="aksh-intro.MOV" type="video/mp4">
 
 </video>
 
 
-<button id="playBtn">
+<button id="playBtn" class="play-btn">
 
 ▶
 
@@ -52,7 +59,41 @@ playsinline>
 
 
 
+
+<!-- SOUND BUTTON -->
+
+<button id="soundBtn" class="sound-btn">
+
+🔇
+
+</button>
+
+
+
+
+<!-- SKIP BUTTON -->
+
+<button id="skipBtn" class="skip-btn">
+
+SKIP INTRO
+
+</button>
+
+
+
+
+<!-- BEGIN BUTTON -->
+
+<button id="beginBtn" class="begin-btn">
+
+BEGIN YOUR JOURNEY
+
+</button>
+
+
+
 </div>
+
 
 
 
