@@ -1,91 +1,61 @@
-// =====================================
-// AKSH INTRO V2
-// =====================================
+/*==========================================
+AKSH INTRO JAVASCRIPT V1
+==========================================*/
 
-const video = document.getElementById("akshVideo");
-const playBtn = document.getElementById("playBtn");
-const soundBtn = document.getElementById("soundBtn");
-const skipBtn = document.getElementById("skipBtn");
-const beginBtn = document.getElementById("beginBtn");
+const video = document.getElementById("introVideo");
+const soundButton = document.getElementById("soundButton");
+const skipButton = document.getElementById("skipButton");
 
-// --------------------------
-// PLAY VIDEO
-// --------------------------
+/*==========================================
+Sound Toggle
+==========================================*/
 
-playBtn.addEventListener("click", () => {
+soundButton.addEventListener("click", () => {
 
-    video.play();
+video.muted = !video.muted;
 
-    playBtn.style.display = "none";
+if(video.muted){
 
-});
+soundButton.innerHTML = "🔇 Sound Off";
 
-// --------------------------
-// SOUND
-// --------------------------
+}else{
 
-video.muted = true;
+soundButton.innerHTML = "🔊 Sound On";
 
-soundBtn.addEventListener("click", () => {
-
-    video.muted = !video.muted;
-
-    soundBtn.textContent = video.muted ? "🔇" : "🔊";
+}
 
 });
 
-// --------------------------
-// VIDEO FINISHED
-// --------------------------
+/*==========================================
+Skip Intro
+==========================================*/
+
+skipButton.addEventListener("click", () => {
+
+window.location.href = "home.html";
+
+});
+
+/*==========================================
+Video Finished
+==========================================*/
 
 video.addEventListener("ended", () => {
 
-    sessionStorage.setItem("akshIntroSeen","true");
-
-    window.location.href="index.html";
+window.location.href = "home.html";
 
 });
 
-// --------------------------
-// SKIP INTRO
-// --------------------------
+/*==========================================
+Auto Play
+==========================================*/
 
-skipBtn.addEventListener("click", () => {
+window.addEventListener("load", () => {
 
-    sessionStorage.setItem("akshIntroSeen","true");
+video.play().catch(() => {
 
-    window.location.href="index.html";
-
-});
-
-// --------------------------
-// BEGIN JOURNEY
-// --------------------------
-
-beginBtn.addEventListener("click", () => {
-
-    sessionStorage.setItem("akshIntroSeen","true");
-
-    window.location.href="index.html";
+console.log("Autoplay blocked until user interaction.");
 
 });
-
-// --------------------------
-// HIDE PLAY BUTTON
-// --------------------------
-
-video.addEventListener("playing", () => {
-
-    playBtn.style.display = "none";
-
-});
-
-video.addEventListener("pause", () => {
-
-    if(!video.ended){
-
-        playBtn.style.display = "flex";
-
-    }
 
 });
