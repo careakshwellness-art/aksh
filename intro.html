@@ -7,9 +7,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THIS IS A TEST</title>
+<title>AKSH | Intro</title>
 
-<link rel="stylesheet" href="intro.css?v=3">
+<link rel="stylesheet" href="intro.css">
 
 </head>
 
@@ -17,172 +17,89 @@
 
 <div class="intro-page">
 
-<!-- ===========================
-BACKGROUND POSTERS
-=========================== -->
+<!-- ==========================
+POSTERS
+========================== -->
 
 <img
-class="poster poster-mobile"
+id="poster-mobile"
+class="intro-poster"
 src="intro-mobile.png.PNG"
-alt="AKSH Mobile Poster">
+alt="AKSH Mobile Intro">
 
 <img
-class="poster poster-tablet"
+id="poster-tablet"
+class="intro-poster"
 src="intro-tablet.png.PNG"
-alt="AKSH Tablet Poster">
+alt="AKSH Tablet Intro">
 
 <img
-class="poster poster-desktop"
+id="poster-desktop"
+class="intro-poster"
 src="intro-desktop.png.PNG"
-alt="AKSH Desktop Poster">
+alt="AKSH Desktop Intro">
 
 <img
-class="poster poster-large"
+id="poster-large"
+class="intro-poster"
 src="intro-large-display.png.PNG"
-alt="AKSH Large Display Poster">
+alt="AKSH Large Display Intro">
 
-<!-- ===========================
-VIDEO LAYER
-=========================== -->
+<!-- ==========================
+VIDEO CONTAINER
+========================== -->
 
 <div class="video-container">
 
 <video
-id="akshVideo"
+id="introVideo"
+autoplay
+muted
 playsinline
 preload="auto">
 
-<source src="aksh-intro.MOV" type="video/mp4">
-
+<source src="aksh-intro.MOV" type="video/quicktime">
 </video>
 
-<button
-id="playBtn"
-class="play-btn">
+</div>
 
-▶
+<!-- ==========================
+CONTROLS
+========================== -->
+
+<div class="intro-controls">
+
+<button id="soundButton">
+
+🔇 Sound Off
 
 </button>
 
-</div>
+<button id="skipButton">
 
-<!-- ===========================
-TOP BUTTONS
-=========================== -->
-
-<button
-id="soundBtn"
-class="sound-btn">
-
-🔇
+⏭ Skip Intro
 
 </button>
 
-<button
-id="skipBtn"
-class="skip-btn">
+<a
+id="enterButton"
+href="home.html">
 
-SKIP INTRO
-
-</button>
-
-<!-- ===========================
-EMOTION SECTION
-=========================== -->
-
-<section class="emotion-section">
-
-<h2>
-
-HOW ARE YOU FEELING TODAY?
-
-</h2>
-
-<div class="emotion-grid">
-
-<a href="anxious.html" class="emotion-card">
-
-<div class="emotion-icon">😔</div>
-
-<div class="emotion-title">
-
-Anxious
-
-</div>
-
-</a>
-
-<a href="overwhelmed.html" class="emotion-card">
-
-<div class="emotion-icon">😞</div>
-
-<div class="emotion-title">
-
-Overwhelmed
-
-</div>
-
-</a>
-
-<a href="exploring.html" class="emotion-card">
-
-<div class="emotion-icon">✨</div>
-
-<div class="emotion-title">
-
-Just Exploring
-
-</div>
-
-</a>
-
-<a href="talk.html" class="emotion-card">
-
-<div class="emotion-icon">❤️</div>
-
-<div class="emotion-title">
-
-Need Someone To Talk
-
-</div>
+Enter AKSH →
 
 </a>
 
 </div>
 
-</section>
+<!-- ==========================
+OVERLAY
+========================== -->
 
-<!-- ===========================
-JOURNEY SECTION
-=========================== -->
+<div class="intro-overlay">
 
-<section class="journey-section">
+<div class="video-frame"></div>
 
-<img
-class="journey-logo"
-src="aksh-icon.png.PNG"
-alt="AKSH">
-
-<h2>
-
-EXPERIENCE<br>
-
-THE<br>
-
-WORLD OF AKSH
-
-</h2>
-
-<button
-id="beginBtn"
-class="begin-btn">
-
-BEGIN YOUR JOURNEY
-
-</button>
-
-</section>
-
+</div>
 </div>
 
 <script src="intro.js"></script>
